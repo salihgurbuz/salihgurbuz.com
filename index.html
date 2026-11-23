@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Doç. Dr. Salih Gürbüz</title>
-<meta name="description" content="Doç. Dr. Salih Gürbüz — Necmettin Erbakan Üniversitesi Radyo, Televizyon ve Sinema Bölümü. İletişim, medya çalışmaları, radyo ve kitaplar.">
+<meta name="description" content="Doç. Dr. Salih Gürbüz: akademisyen, radyocu ve gazeteci. Necmettin Erbakan Üniversitesi Radyo, Televizyon ve Sinema Bölümü. İletişim, medya çalışmaları, radyo ve kitaplar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -48,11 +48,44 @@ nav a:hover{color:var(--gul)}
 .sosyal a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--cizgi);color:var(--lacivert);background:var(--kagit)}
 .sosyal a:hover{color:var(--kagit);background:var(--gul);border-color:var(--gul)}
 
+/* Ses: yüzen düğme ve oynatıcı */
+.ses-dugme{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font:600 1rem var(--f-govde);padding:11px 18px}
+.eq{display:inline-flex;gap:2px;align-items:flex-end;height:14px}
+.eq i{display:block;width:3px;background:currentColor;border-radius:1px;animation:eq 1s ease-in-out infinite}
+.eq i:nth-child(1){height:40%}.eq i:nth-child(2){height:90%;animation-delay:.2s}.eq i:nth-child(3){height:60%;animation-delay:.4s}.eq i:nth-child(4){height:80%;animation-delay:.1s}
+@keyframes eq{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+.eq i{transform-origin:bottom}
+.ses-yuzen{position:fixed;right:22px;bottom:22px;z-index:20;display:flex;align-items:center;gap:10px;height:68px;padding:0 22px 0 20px;border:0;border-radius:999px;background:var(--lacivert);color:var(--kagit);font:600 1rem var(--f-govde);cursor:pointer;box-shadow:0 10px 30px rgba(31,42,74,.35)}
+.ses-yuzen svg{color:#f3b8c4}
+.ses-yuzen:hover{background:var(--gul)}.ses-yuzen:hover svg{color:var(--kagit)}
+.ses-yuzen .halka{position:absolute;inset:-6px;border-radius:999px;border:2px solid var(--gul);opacity:.7;animation:halka 2.2s ease-out infinite;pointer-events:none}
+@keyframes halka{0%{transform:scale(.95);opacity:.75}100%{transform:scale(1.18);opacity:0}}
+body.ses-acik .ses-yuzen{display:none}
+.ses-panel{position:fixed;right:22px;bottom:22px;z-index:21;width:min(400px,calc(100vw - 32px));background:var(--lacivert);border-radius:10px;overflow:hidden;box-shadow:0 14px 40px rgba(31,42,74,.4)}
+.ses-panel[hidden]{display:none}
+.ses-panel-ust{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px 10px 16px;color:#cfc8b8;font-size:.88rem}
+.ses-panel-ust b{color:var(--kagit)}
+.ses-kapat{border:0;background:transparent;color:var(--kagit);font-size:1.6rem;line-height:1;cursor:pointer;width:34px;height:34px;border-radius:50%}
+.ses-kapat:hover{background:rgba(255,255,255,.12)}
+.ses-ekran{aspect-ratio:16/9;background:#000}
+.ses-ekran iframe{width:100%;height:100%;border:0;display:block}
+@media (max-width:560px){.ses-etiket{display:none}.ses-yuzen{width:64px;height:64px;padding:0;justify-content:center;right:16px;bottom:16px}.ses-panel{right:16px;bottom:16px}}
+@media (prefers-reduced-motion:reduce){.eq i,.ses-yuzen .halka{animation:none}}
+
 /* Giriş */
 .giris{padding:56px 0 48px}
 .giris .kap{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:48px;align-items:center}
 .portre{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 22%;border-radius:4px;box-shadow:0 1px 0 var(--cizgi), 12px 12px 0 var(--lacivert)}
 .unvan{font-weight:600;letter-spacing:.14em;font-size:.8rem;color:var(--gul);text-transform:uppercase;margin:0 0 10px}
+.h1-unvan{display:block;font-size:.42em;font-weight:500;letter-spacing:.04em;color:var(--soluk);margin-bottom:4px}
+.hero-alanlar{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 14px}
+.hero-alanlar li{font-size:.85rem;padding:4px 11px;border-radius:999px;background:var(--lacivert);color:var(--kagit)}
+.hero-kitaplar{font-size:.95rem;margin:0 0 24px;max-width:62ch}
+.hero-kitaplar span{font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;color:var(--gul);margin-right:6px}
+.baglanti.vurgu{background:var(--lacivert);border-color:var(--lacivert)}
+.baglanti.vurgu strong{color:var(--kagit)}.baglanti.vurgu span{color:#cfc8b8}
+.baglanti.vurgu:hover{background:var(--gul);border-color:var(--gul)}.baglanti.vurgu:hover strong{color:var(--kagit)}
+
 .giris h1{font-size:clamp(2.1rem,4.5vw,3.1rem);font-weight:600}
 .giris .gorev{font-size:1.1rem;color:var(--soluk);margin:12px 0 20px;max-width:52ch}
 .giris p.ozet{max-width:60ch;margin:0 0 24px}
@@ -160,6 +193,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <li><a href="#radyo">Radyo</a></li>
         <li><a href="#yazilar">Yazılar</a></li>
         <li><a href="#yayinlar">Yayınlar</a></li>
+        <li><a href="ozgecmis.html">Özgeçmiş</a></li>
         <li><a href="#iletisim">İletişim</a></li>
       </ul>
     </nav>
@@ -175,13 +209,23 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="kap">
       <img class="portre" src="img/portre.jpg" alt="Doç. Dr. Salih Gürbüz" width="614" height="800">
       <div>
-        <p class="unvan">Doç. Dr.</p>
-        <h1>Salih Gürbüz</h1>
+        <p class="unvan">Akademisyen · Radyocu · Gazeteci</p>
+        <h1><span class="h1-unvan">Doç. Dr.</span> Salih Gürbüz</h1>
         <p class="gorev">Necmettin Erbakan Üniversitesi, Radyo, Televizyon ve Sinema Bölüm Başkanı</p>
-        <p class="ozet">İletişimi insanın kendisiyle, başkalarıyla ve toplumla kurduğu ilişkinin merkezinde gören bir akademisyen ve radyocu. Medya söylemlerini çözümlüyor, iletişimin psikolojisini yazıyor, mikrofonun başında bu soruları dinleyicilerle paylaşıyor.</p>
+        <p class="ozet">Mikrofonun, kürsünün ve kalemin buluştuğu yerde tek bir soru var: İnsan, kendisiyle ve dünyayla nasıl konuşur? Yirmi beş yılı aşkın radyo yayıncılığı, gazetecilikten gelen kalem ve medya araştırmalarındaki akademik birikimle bu sorunun peşinde.</p>
+        <ul class="hero-alanlar" aria-label="Çalışma alanları">
+          <li>İletişim psikolojisi</li>
+          <li>Göstergebilim</li>
+          <li>Medya ve söylem çözümlemesi</li>
+          <li>Siyasal iletişim</li>
+          <li>Halkla ilişkiler ve kurum imajı</li>
+          <li>Sinema çalışmaları</li>
+        </ul>
+        <p class="hero-kitaplar"><span>Kitapları</span> <a href="#kitaplar"><em>İletişimin Psikolojisi</em> (2025)</a>, <a href="#kitaplar"><em>En Büyük Meselemiz: İlet-İşim</em> (2022)</a>, <a href="#kitaplar"><em>Kurum İmajı</em> (2017)</a></p>
         <div class="dugmeler">
-          <a class="dugme dolu" href="#kitaplar">Kitaplar</a>
-          <a class="dugme bos" href="#dinle">▶ Sesimi dinleyin</a>
+          <button type="button" class="dugme dolu dinle-ac ses-dugme"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Sesimi dinleyin <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+          <a class="dugme bos" href="ozgecmis.html">Özgeçmiş</a>
+          <a class="dugme bos" href="#kitaplar">Kitaplar</a>
         </div>
       </div>
     </div>
@@ -190,15 +234,18 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section class="bolum" id="hakkinda">
     <div class="kap metin">
       <h2>Hakkında</h2>
-      <p>Doç. Dr. Salih Gürbüz, Necmettin Erbakan Üniversitesi Güzel Sanatlar ve Mimarlık Fakültesi'nde görev yapan bir akademisyen, yazar ve radyocudur. Radyo, Televizyon ve Sinema Bölümü'nün başkanlığını yürütmekte, Film Tasarımı ve Yönetmenliği Anasanat Dalı'nda ders vermektedir. Yüksek lisans ve doktora eğitimini Selçuk Üniversitesi Sosyal Bilimler Enstitüsü'nde, Halkla İlişkiler ve Tanıtım alanında tamamlamıştır.</p>
-      <p>Çalışmaları kurum imajı ve halkla ilişkilerden siyasal iletişime, sinema kuramlarından dijital medyaya ve iletişim psikolojisine uzanır. Medya metinlerini eleştirel söylem analizi ve çerçeveleme gibi yöntemlerle incelemektedir.</p>
-      <p>Akademik çalışmalarının yanında yirmi beş yılı aşkın radyo deneyimiyle yayıncılığı sürdürmektedir. Radyoda, YouTube kanalında ve televizyon programlarında iletişim, teknoloji bağımlılığı ve psikoloji üzerine içerikler hazırlamaktadır. <em>Hakimiyet</em> ve <em>Milli Gazete</em>'de yazıları yayımlanmış, <em>Ribat</em> ve <em>Gönül</em> dergilerinde yazmaktadır.</p>
+      <p>Doç. Dr. Salih Gürbüz, Necmettin Erbakan Üniversitesi Güzel Sanatlar ve Mimarlık Fakültesi Radyo, Televizyon ve Sinema Bölümü'nün kurucu bölüm başkanıdır. Sosyal Bilimler Enstitüsü'nde Sinema ve Televizyon Tezli Yüksek Lisans Programı'nın anabilim dalı başkanlığını da yürütmektedir. Doktorasını Selçuk Üniversitesi'nde Halkla İlişkiler ve Tanıtım alanında tamamlamış, 2020'de doçent unvanını almıştır.</p>
+      <p>Araştırmalarının merkezinde medyanın anlamı nasıl ürettiği sorusu yer alır. Göstergebilim, eleştirel söylem analizi ve çerçeveleme kuramıyla film, haber ve sosyal medya metinlerini çözümler; kurum imajı, kriz iletişimi ve siyasal iletişim üzerine alan araştırmaları yürütür. Yirmi altı hakemli makalesi, Peter Lang yayınları dahil yirmi kitap bölümü, üç kitabı ve üç editörlü kitabı bulunmaktadır. Danışmanlığını üstlendiği on üç yüksek lisans tezi, sinemadan siyasal iletişime uzanan bir araştırma alanı oluşturur.</p>
+      <p>Bilgiyi kürsüyle sınırlamaz. 2004-2005'te <em>Anadolu'nun Sesi</em> dergisinin genel yayın yönetmenliğini yapmış, <em>Hakimiyet</em> ve <em>Milli Gazete</em>'de yazmış, <em>Ribat</em> dergisinde yazmayı sürdürmektedir. Radyo programları, YouTube kanalı ve TÜBİTAK destekli medya okuryazarlığı eğitimlerinden belgesel yapımına uzanan projeleriyle akademik birikimi toplumla buluşturur. Akademiye geçmeden önce on yıl Millî Eğitim Bakanlığında öğretmenlik yapmıştır.</p>
       <dl class="kronoloji">
         <div><dt>2004-2005</dt><dd><em>Anadolu'nun Sesi</em> dergisi, genel yayın yönetmeni</dd></div>
-        <div><dt>2017</dt><dd>Doktor öğretim üyesi</dd></div>
+        <div><dt>2007-2017</dt><dd>Millî Eğitim Bakanlığı, öğretmen</dd></div>
+        <div><dt>2016</dt><dd>Doktora, Selçuk Üniversitesi, Halkla İlişkiler ve Tanıtım</dd></div>
+        <div><dt>2017</dt><dd>Doktor öğretim üyesi; Radyo, Televizyon ve Sinema Bölümü kurucu bölüm başkanı</dd></div>
         <div><dt>2020</dt><dd>Doçent</dd></div>
-        <div><dt>Bugün</dt><dd>Necmettin Erbakan Üniversitesi, Radyo, Televizyon ve Sinema Bölüm Başkanı</dd></div>
+        <div><dt>2021</dt><dd>Sinema ve Televizyon Tezli Yüksek Lisans Programı, anabilim dalı başkanı</dd></div>
       </dl>
+      <p class="tumu"><a href="ozgecmis.html">Ayrıntılı özgeçmişi görüntüle</a></p>
       <ul class="alanlar" aria-label="Çalışma alanları">
         <li>Kurum imajı</li>
         <li>Halkla ilişkiler</li>
@@ -243,7 +290,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <div>
               <h3>En Büyük Meselemiz: İlet-İşim</h3>
               <p class="altbaslik">Kişilerarası İlişkilerde ve Sosyal Medyada İletişim</p>
-              <p class="kunye">Literatürk Academia</p>
+              <p class="kunye">Literatürk Academia, 2022</p>
             </div>
           </article>
           <article class="kitap">
@@ -251,7 +298,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
             <div>
               <h3>Kurum İmajı</h3>
               <p class="altbaslik">Bileşenleri ve Belirleyicileri</p>
-              <p class="kunye">Literatürk Academia</p>
+              <p class="kunye">Literatürk Academia, 2017</p>
               <a class="kitap-baglanti" href="https://share.google/IGMIdwq5dF1j14ve4" target="_blank" rel="noopener">Satın al</a>
             </div>
           </article>
@@ -268,7 +315,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <div>
             <h3>21. Yüzyılda İletişim ve Sanat</h3>
             <p class="altbaslik">Editör: Salih Gürbüz</p>
-            <p class="kunye">NEÜ Yayınları</p>
+            <p class="kunye">NEÜ Yayınları, 2021</p>
             <a class="kitap-baglanti" href="https://share.google/h1XvUDgKiWBC1W248" target="_blank" rel="noopener">Kitabı incele</a>
           </div>
         </article>
@@ -277,7 +324,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <div>
             <h3>Eleştirel Yaklaşımlar ve Analizler</h3>
             <p class="altbaslik">Editörler: Salih Gürbüz, Bayram Oğuz Aydın, Enderhan Karakoç</p>
-            <p class="kunye">Akademisyen Kitabevi</p>
+            <p class="kunye">Akademisyen Kitabevi, 2025</p>
             <a class="kitap-baglanti" href="https://share.google/hLFPfYiAhShsJnN52" target="_blank" rel="noopener">Satın al</a>
           </div>
         </article>
@@ -286,7 +333,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <div>
             <h3 lang="en">Public Relations in the Networked Publics</h3>
             <p class="altbaslik">Editörler: Bayram Oğuz Aydın, Salih Gürbüz, Özlem Duğan</p>
-            <p class="kunye">Peter Lang</p>
+            <p class="kunye">Peter Lang, 2019</p>
             <a class="kitap-baglanti" href="https://share.google/Va419XAlbfiuCXVMk" target="_blank" rel="noopener">Satın al</a>
           </div>
         </article>
@@ -424,7 +471,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <section class="bolum" id="yayinlar">
     <div class="kap">
       <h2>Yayınlar</h2>
-      <p class="giris-metni">Makaleler, hakemlik ve atıf kayıtları güncel olarak aşağıdaki profillerde.</p>
+      <p class="giris-metni">Yirmi altı hakemli makale ve yirmi kitap bölümünün tam listesi özgeçmişte. Güncel atıf ve hakemlik kayıtları akademik profillerde.</p>
       <div class="baglantilar">
         <a class="baglanti" href="https://dergipark.org.tr/tr/pub/@gurbuzsalih" target="_blank" rel="noopener">
           <strong>DergiPark</strong>
@@ -437,6 +484,18 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <a class="baglanti" href="https://share.google/tZuXiEWoLOkRbGDMM" target="_blank" rel="noopener">
           <strong>Academia.edu</strong>
           <span>Makale ve bildiri metinleri</span>
+        </a>
+        <a class="baglanti" href="https://scholar.google.com/citations?user=hv8YadIAAAAJ" target="_blank" rel="noopener">
+          <strong>Google Akademik</strong>
+          <span>Atıflar ve yayın listesi</span>
+        </a>
+        <a class="baglanti" href="https://akademik.yok.gov.tr/academician-details?authorGuidId=E8F2F3BFB710930E" target="_blank" rel="noopener">
+          <strong>YÖK Akademik</strong>
+          <span>Resmî akademik profil</span>
+        </a>
+        <a class="baglanti vurgu" href="ozgecmis.html">
+          <strong>Özgeçmiş</strong>
+          <span>26 makale, 20 kitap bölümü, projeler ve tezler</span>
         </a>
       </div>
     </div>
@@ -474,5 +533,31 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </footer>
 
+
+<div class="ses-panel" id="sesPanel" hidden>
+  <div class="ses-panel-ust">
+    <span><b>İletişim Günlüğü</b> · Salih Gürbüz'ün sesinden</span>
+    <button type="button" class="ses-kapat" aria-label="Oynatıcıyı kapat">×</button>
+  </div>
+  <div class="ses-ekran"></div>
+</div>
+<button type="button" class="ses-yuzen dinle-ac" aria-label="Sesimi dinleyin: oynatıcıyı aç">
+  <span class="halka" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  <span class="ses-etiket">Sesimi dinleyin</span>
+</button>
+<script>
+(function(){
+  var panel=document.getElementById('sesPanel'), ekran=panel.querySelector('.ses-ekran'), yuklendi=false;
+  var src='https://www.youtube-nocookie.com/embed/videoseries?list=PLpmNT3Atl_fx6WvcMI9XJkXj-Gzmn7KCg&autoplay=1';
+  function ac(){
+    if(!yuklendi){ekran.innerHTML='<iframe src="'+src+'" title="Salih Gürbüz oynatma listesi" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';yuklendi=true;}
+    panel.hidden=false; document.body.classList.add('ses-acik');
+  }
+  function kapat(){panel.hidden=true; ekran.innerHTML=''; yuklendi=false; document.body.classList.remove('ses-acik');}
+  document.querySelectorAll('.dinle-ac').forEach(function(b){b.addEventListener('click',ac);});
+  panel.querySelector('.ses-kapat').addEventListener('click',kapat);
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Özgeçmiş | Doç. Dr. Salih Gürbüz</title>
+<meta name="description" content="Doç. Dr. Salih Gürbüz akademik özgeçmişi: eğitim, görevler, projeler, tez danışmanlıkları, yayınlar ve dersler.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Düzen: solda sabit kimlik kartı (fotoğraf, rakamlar, profiller), sağda zaman çizelgesi biçiminde özgeçmiş bölümleri. */
+:root{--zemin:#faf6eb;--kagit:#fffdf8;--lacivert:#1f2a4a;--gul:#b5475e;--metin:#2b2d33;--soluk:#6b6a6f;--cizgi:#ddd3c2;
+--f-baslik:"Fraunces",Georgia,serif;--f-govde:"Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--zemin);color:var(--metin);font:400 1rem/1.6 var(--f-govde)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--lacivert);text-decoration-color:var(--gul);text-underline-offset:3px}a:hover{color:var(--gul)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gul);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-baslik);color:var(--lacivert);line-height:1.2;margin:0;text-wrap:balance}
+.ust{border-bottom:1px solid var(--cizgi);background:var(--zemin)}
+.ust .kap,.duzen{max-width:1160px;margin:0 auto;padding:0 20px}
+.ust .kap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+.ust img{height:54px;width:auto}
+.ust nav{display:flex;gap:10px;flex-wrap:wrap}
+.dugme{display:inline-block;padding:9px 16px;border-radius:3px;font-weight:600;text-decoration:none;border:1.5px solid var(--lacivert);color:var(--lacivert);background:transparent;font:600 .95rem var(--f-govde);cursor:pointer}
+.dugme.dolu{background:var(--lacivert);color:var(--kagit)}.dugme:hover{border-color:var(--gul);background:var(--gul);color:var(--kagit)}
+.duzen{display:grid;grid-template-columns:300px 1fr;gap:48px;padding-top:40px;padding-bottom:64px;align-items:start}
+.kart{background:var(--lacivert);color:#e9e4d8;border-radius:6px;overflow:hidden}
+.kart img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 22%}
+.kart .ic{padding:22px 22px 26px}
+.kart .unvan{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#e7a9b6;font-weight:600}
+.kart h1{color:#fffdf8;font-size:1.9rem;margin:4px 0 6px}
+.kart .gorev{font-size:.92rem;color:#cfc8b8;margin:0 0 18px}
+.rakamlar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px;padding:0;list-style:none}
+.rakamlar li{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:10px 12px}
+.rakamlar b{display:block;font-family:var(--f-baslik);font-size:1.6rem;color:#fffdf8;line-height:1;font-variant-numeric:tabular-nums}
+.rakamlar span{font-size:.8rem;color:#cfc8b8}
+.profil{list-style:none;margin:0;padding:0;font-size:.9rem;display:grid;gap:6px}
+.profil a{color:#fffdf8;text-decoration-color:#e7a9b6}
+.profil span{color:#a9a294;display:inline-block;min-width:92px}
+main section{padding:0 0 40px;margin:0 0 40px;border-bottom:1px solid var(--cizgi)}
+main section:last-child{border-bottom:0}
+main h2{font-size:1.6rem;font-weight:500;display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
+main h2::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gul);flex:none;transform:translateY(-4px)}
+main h3{font-size:1.1rem;font-weight:500;margin:26px 0 12px;color:var(--gul);font-family:var(--f-govde);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem}
+.cizelge{list-style:none;margin:0;padding:0;border-left:2px solid var(--cizgi)}
+.cizelge li{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:0 0 16px 18px;position:relative}
+.cizelge li::before{content:"";position:absolute;left:-6px;top:.5em;width:10px;height:10px;border-radius:50%;background:var(--kagit);border:2px solid var(--gul)}
+.yil{font-weight:600;color:var(--lacivert);font-variant-numeric:tabular-nums;font-size:.92rem}
+.alt{display:block;color:var(--soluk);font-size:.9rem}
+.rozet{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gul);border:1px solid var(--gul);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:2px}
+.kitapad{font-style:italic}
+.doi{font-size:.85rem;white-space:nowrap}
+.etiketler{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.etiketler li{border:1px solid var(--cizgi);background:var(--kagit);padding:5px 12px;border-radius:999px;font-size:.92rem}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:600;color:var(--lacivert);padding:8px 0}
+summary:hover{color:var(--gul)}
+footer{border-top:1px solid var(--cizgi);padding:24px 20px;text-align:center;color:var(--soluk);font-size:.9rem}
+@media (max-width:860px){.duzen{grid-template-columns:1fr;gap:32px}.kart{position:static}.kart img{max-height:320px}}
+@media (max-width:480px){.cizelge li{grid-template-columns:1fr;gap:2px}}
+@media print{
+ .ust nav,.yazdir,footer{display:none} body{background:#fff;font-size:10.5pt}
+ .duzen{grid-template-columns:1fr;padding:0} .kart{position:static;background:#fff;color:var(--metin);border:1px solid var(--cizgi);display:grid;grid-template-columns:120px 1fr}
+ .kart img{aspect-ratio:1/1} .kart h1{color:var(--lacivert)} .kart .gorev,.rakamlar span,.profil span{color:var(--soluk)} .rakamlar b,.profil a{color:var(--lacivert)}
+ .rakamlar{grid-template-columns:repeat(5,1fr)} .rakamlar li{background:none;border-color:var(--cizgi)}
+ details{display:block} details>*{display:block} summary{display:none} main section{break-inside:auto} .cizelge li{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="ust">
+  <div class="kap">
+    <a href="index.html" aria-label="Ana sayfa"><img src="img/logo.jpg" alt="Salih Gürbüz, Otonom Bilim İnsanı" width="600" height="211"></a>
+    <nav>
+      <a class="dugme" href="index.html">Ana sayfa</a>
+      <button class="dugme dolu yazdir" type="button" onclick="window.print()">Yazdır / PDF</button>
+    </nav>
+  </div>
+</header>
+
+<div class="duzen">
+  <aside class="kart">
+    <img src="img/portre.jpg" alt="Doç. Dr. Salih Gürbüz" width="614" height="800">
+    <div class="ic">
+      <div class="unvan">Doç. Dr.</div>
+      <h1>Salih Gürbüz</h1>
+      <p class="gorev">Necmettin Erbakan Üniversitesi, Güzel Sanatlar ve Mimarlık Fakültesi, Radyo, Televizyon ve Sinema Bölüm Başkanı</p>
+      <ul class="rakamlar">
+        <li><b>26</b><span>hakemli makale</span></li>
+        <li><b>20</b><span>kitap bölümü</span></li>
+        <li><b>3+3</b><span>kitap ve editörlük</span></li>
+        <li><b>13</b><span>yönetilen tez</span></li>
+        <li><b>8</b><span>proje</span></li>
+        <li><b>25+</b><span>yıl radyo</span></li>
+      </ul>
+      <ul class="profil">
+        <li><span>E-posta</span><a href="mailto:sgurbuz@erbakan.edu.tr">sgurbuz@erbakan.edu.tr</a></li>
+        <li><span>ORCID</span><a href="https://orcid.org/0000-0002-5690-8136" target="_blank" rel="noopener">0000-0002-5690-8136</a></li>
+        <li><span>Google Akademik</span><a href="https://scholar.google.com/citations?user=hv8YadIAAAAJ" target="_blank" rel="noopener">Profil</a></li>
+        <li><span>YÖK Akademik</span><a href="https://akademik.yok.gov.tr/academician-details?authorGuidId=E8F2F3BFB710930E" target="_blank" rel="noopener">Profil</a></li>
+        <li><span>DergiPark</span><a href="https://dergipark.org.tr/tr/pub/@gurbuzsalih" target="_blank" rel="noopener">Profil</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <section id="egitim">
+      <h2>Eğitim</h2>
+      <ul class="cizelge">
+        <li><span class="yil">2011-2016</span><div><strong>Doktora, Halkla İlişkiler ve Tanıtım</strong><span class="alt">Selçuk Üniversitesi. Tez: <em>Milli Eğitim Bakanlığının kurumsal imaj algısı: Konya örneğinde bir saha araştırması</em></span></div></li>
+        <li><span class="yil">2007-2010</span><div><strong>Yüksek lisans, Halkla İlişkiler</strong><span class="alt">Selçuk Üniversitesi</span></div></li>
+        <li><span class="yil">Lisans</span><div><strong>İngilizce Öğretmenliği</strong><span class="alt">Anadolu Üniversitesi</span></div></li>
+      </ul>
+    </section>
+
+    <section id="gorevler">
+      <h2>Akademik ve idari görevler</h2>
+      <ul class="cizelge">
+        <li><span class="yil">2021-</span><div><strong>Anabilim Dalı Başkanı</strong><span class="alt">Sosyal Bilimler Enstitüsü, Sinema ve Televizyon Tezli Yüksek Lisans Programı</span></div></li>
+        <li><span class="yil">2020</span><div><strong>Doçent</strong><span class="alt">Radyo, Televizyon ve Sinema Bölümü</span></div></li>
+        <li><span class="yil">2019-2021</span><div><strong>Müdür Yardımcısı</strong><span class="alt">İletişim Çalışmaları Uygulama ve Araştırma Merkezi</span></div></li>
+        <li><span class="yil">2017-</span><div><strong>Kurucu Bölüm Başkanı</strong><span class="alt">Radyo, Televizyon ve Sinema Bölümü; Fakülte Kurulu Üyesi</span></div></li>
+        <li><span class="yil">2017</span><div><strong>Doktor Öğretim Üyesi</strong><span class="alt">Necmettin Erbakan Üniversitesi</span></div></li>
+        <li><span class="yil">2007-2017</span><div><strong>Öğretmen</strong><span class="alt">Millî Eğitim Bakanlığı</span></div></li>
+        <li><span class="yil">2004-2005</span><div><strong>Genel Yayın Yönetmeni</strong><span class="alt"><em>Anadolu'nun Sesi</em> dergisi</span></div></li>
+      </ul>
+    </section>
+
+    <section id="projeler">
+      <h2>Projeler</h2>
+      <ul class="cizelge">
+<li><span class="yil">2025-2026</span><div><strong>Sinematografik Anlatılar Üzerinden Toplumsal İletişim Stratejileri ve Kamu Farkındalığı Projesi</strong> <span class="rozet">Yürütücü</span><span class="alt">Özel kuruluş destekli</span></div></li>
+<li><span class="yil">2024</span><div><strong>Sadâ Kültür, Sanat ve Edebiyat Projesi: Ihlamurlar Çiçek Açıyor</strong> <span class="alt">Din Öğretimi Genel Müdürlüğü, Konya Selçuklu Nene Hatun İmam Hatip Ortaokulu</span></div></li>
+<li><span class="yil">2023-2024</span><div><strong>Açık Kaynak Dijital İçerik Üretme Projesi (P2023-008)</strong> <span class="rozet">Araştırmacı</span><span class="alt">Kamu kurumu destekli</span></div></li>
+<li><span class="yil">2023</span><div><strong>Film, Medya Okuryazarlığı ve Halkla İlişkiler Eğitimi Projesi</strong> <span class="rozet">Yürütücü</span><span class="alt">Kamu kurumu destekli</span></div></li>
+<li><span class="yil">2021-2023</span><div><strong>Tarihe Tanıklık: Prof. Dr. Necmettin Erbakan&#x27;ın Siyasi Kişiliği ve Pratiği Üzerine Bir Sözlü Tarih Çalışması</strong> <span class="rozet">Araştırmacı</span><span class="alt">Bilimsel araştırma projesi (BAP)</span></div></li>
+<li><span class="yil">2020-2021</span><div><strong>Prof. Dr. Necmettin Erbakan Belgeseli</strong> <span class="rozet">Yürütücü</span><span class="alt">Bilimsel araştırma projesi (BAP)</span></div></li>
+<li><span class="yil">2020</span><div><strong>1001 Gözle Rize Kısa Film Yarışması</strong> <span class="rozet">Festival koordinatörü</span><span class="alt">Kamu kurumu destekli</span></div></li>
+<li><span class="yil">2019-2020</span><div><strong>Dijital Çağın Okuryazar Bireyleri (218B646)</strong> <span class="alt">TÜBİTAK 4004 Doğa Eğitimi ve Bilim Okulları</span></div></li>
+      </ul>
+    </section>
+
+    <section id="yayinlar">
+      <h2>Yayınlar</h2>
+      <h3>Kitaplar</h3>
+      <ul class="cizelge">
+        <li><span class="yil">2025</span><div><em>İletişimin Psikolojisi: Benlik, İlişkiler ve Toplumsal Bağlam</em>. Palet Yayınları.</div></li>
+        <li><span class="yil">2022</span><div><em>En Büyük Meselemiz: İlet-İşim</em>. Literatürk Academia.</div></li>
+        <li><span class="yil">2017</span><div><em>Kurum İmajı: Bileşenleri ve Belirleyicileri</em>. Literatürk Academia.</div></li>
+      </ul>
+      <h3>Editörlükler</h3>
+      <ul class="cizelge">
+        <li><span class="yil">2025</span><div><em>Eleştirel Yaklaşımlar ve Analizler</em>. Akademisyen Kitabevi.</div></li>
+        <li><span class="yil">2021</span><div><em>21. Yüzyılda İletişim ve Sanat</em>. NEÜ Yayınları.</div></li>
+        <li><span class="yil">2019</span><div><em>Public Relations in the Networked Publics</em>. Peter Lang.</div></li>
+      </ul>
+      <h3>Uluslararası hakemli dergi makaleleri</h3>
+      <ul class="cizelge">
+<li><span class="yil">2025</span><div>Küçük, O., Koçak, M. C. ve Gürbüz, S. <em>Ingmar Bergman&#x27;ın Yedinci Mühür filminde kadın, veba ve zamansal gerçeklik</em>. Türkiye Medya Akademisi Dergisi, 152-174.</div></li>
+<li><span class="yil">2025</span><div>Berk, M. E., Arslan, E. ve Gürbüz, S. <em>Folklorik unsurlar olarak Mabel Matiz kliplerinde aşk ve hakikat kavramları: Göstergebilimsel bir çalışma</em>. Art-e Sanat Dergisi, 18(35), 363-388. <a class="doi" href="https://doi.org/10.21602/sduarte.1469757" target="_blank" rel="noopener">doi:10.21602/sduarte.1469757</a></div></li>
+<li><span class="yil">2025</span><div>Gürbüz, S., Koçak, M. C. ve Türten, B. <em>Morality that is ignored: Examining the movie Davaro in the context of Marxist morality</em>. ODU Journal of Social Sciences, 15(2), 1124-1152. <a class="doi" href="https://doi.org/10.48146/odusobiad.1513346" target="_blank" rel="noopener">doi:10.48146/odusobiad.1513346</a></div></li>
+<li><span class="yil">2025</span><div>Koçak, M. C., Küçük, O. ve Gürbüz, S. <em>Dijital giyotinde mahkûmun kahramanlaştırılması, iktidarın tüketimi: Saddam Hüseyin&#x27;in idamına ilişkin YouTube söylemlerinin analizi</em>. International Journal of Language Academy, 3(55), 141-156. <a class="doi" href="https://doi.org/10.29228/ijla.83087" target="_blank" rel="noopener">doi:10.29228/ijla.83087</a></div></li>
+<li><span class="yil">2024</span><div>Gürbüz, S. ve Arslan, E. <em>Korkunun göstergelerinde ölümün mutlakiyetini araştırmak: Kızıl Ölümün Maskesi filmine göstergebilimsel bir yaklaşım</em>. Selçuk Üniversitesi Sosyal Bilimler Enstitüsü Dergisi, 86-108. <a class="doi" href="https://doi.org/10.52642/susbed.1352117" target="_blank" rel="noopener">doi:10.52642/susbed.1352117</a></div></li>
+<li><span class="yil">2024</span><div>Arslan, E. ve Gürbüz, S. <em>A systematic analysis of auteur theory in cinema in graduate theses in Turkey</em>. Gümüşhane Üniversitesi İletişim Fakültesi Elektronik Dergisi, 12(3), 980-1016. <a class="doi" href="https://doi.org/10.19145/e-gifder.1504837" target="_blank" rel="noopener">doi:10.19145/e-gifder.1504837</a></div></li>
+<li><span class="yil">2024</span><div>Ereser, R., Gürbüz, S. ve Arslan, E. <em>31 Mart 2024 yerel seçimlerinde afişlerin siyasal iletişim ve ikna amaçlı kullanımı: Ekrem İmamoğlu afişleri örneğinde göstergebilimsel bir analiz</em>. SDÜ İFADE, 6(2), 63-83. <a class="doi" href="https://doi.org/10.70627/sduifade.1597308" target="_blank" rel="noopener">doi:10.70627/sduifade.1597308</a></div></li>
+<li><span class="yil">2024</span><div>Arslan, E., Gürbüz, S. ve Berk, M. E. <em>İSTEM dergisinin bibliyometrik analizi</em>. İSTEM, 1-20. <a class="doi" href="https://doi.org/10.31591/istem.1507977" target="_blank" rel="noopener">doi:10.31591/istem.1507977</a></div></li>
+<li><span class="yil">2024</span><div>Koçak, M. C., Küçük, O. ve Gürbüz, S. <em>Gazete haberlerinde seri cinayet söylemi</em>. International Journal of Language Academy, 12(52), 68-82. <a class="doi" href="https://doi.org/10.29228/ijla.77997" target="_blank" rel="noopener">doi:10.29228/ijla.77997</a></div></li>
+<li><span class="yil">2023</span><div>Gürbüz, S. ve Aydın, B. O. <em>The mediating role of social media news confirmation/trust in the effect of COVID-19 vaccine literacy on attitudes towards vaccination</em>. Gümüşhane Üniversitesi İletişim Fakültesi Elektronik Dergisi, 11(2), 1286-1316.</div></li>
+<li><span class="yil">2023</span><div>Gürbüz, S. ve İnci, B. <em>Bir yazılı iletişim aracı olarak mezar taşı kitabeleri</em>. Konya Sanat, 57-68. <a class="doi" href="https://doi.org/10.51118/konsan.2023.24" target="_blank" rel="noopener">doi:10.51118/konsan.2023.24</a></div></li>
+<li><span class="yil">2022</span><div>Gürbüz, S. <em>A theoretical study on the meaning of trust in public relations</em>. Türkiye Medya Akademisi Dergisi, 2(3), 40-54. <a class="doi" href="https://doi.org/10.5281/zenodo.6556505" target="_blank" rel="noopener">doi:10.5281/zenodo.6556505</a></div></li>
+<li><span class="yil">2020</span><div>Gürbüz, S. <em>Kriz iletişiminde kurumsal özür yanıtlarının kamu öfkesi üzerinde etkisi: Deneysel bir çalışma</em>. Gümüşhane Üniversitesi İletişim Fakültesi Elektronik Dergisi, 8(1), 21-44. <a class="doi" href="https://doi.org/10.19145/e-gifder.639219" target="_blank" rel="noopener">doi:10.19145/e-gifder.639219</a></div></li>
+<li><span class="yil">2020</span><div>Gürbüz, S. <em>Türk üniversite öğrencileri gözünde Suriye imajı üzerine göstergebilimsel bir çalışma</em>. OPUS Uluslararası Toplum Araştırmaları Dergisi, 15(26), 3988-4018. <a class="doi" href="https://doi.org/10.26466/opus.662744" target="_blank" rel="noopener">doi:10.26466/opus.662744</a></div></li>
+      </ul>
+      <h3>Ulusal hakemli dergi makaleleri</h3>
+      <details><summary>12 makaleyi göster</summary>
+      <ul class="cizelge">
+<li><span class="yil">2020</span><div>Tarhan, A. ve Gürbüz, S. <em>Banka tercihini etkileyen halkla ilişkiler değişkenleri: Kurum imajı üzerine bir alan araştırması</em>. Erciyes İletişim Dergisi, 7(1), 75-106. <a class="doi" href="https://doi.org/10.17680/erciyesiletisim.628039" target="_blank" rel="noopener">doi:10.17680/erciyesiletisim.628039</a></div></li>
+<li><span class="yil">2019</span><div>Gürbüz, S. <em>Suriyeli sığınmacı kadınlar örneğinde sağlık personeli imajı</em>. Kurgu, 27(3).</div></li>
+<li><span class="yil">2019</span><div>Gürbüz, S. ve Tarhan, A. <em>Türkiye&#x27;nin ilk 500 sanayi kuruluşunun sponsorluk uygulamaları: Kurumsal web sayfaları üzerine bir analiz</em>. Akdeniz Üniversitesi İletişim Fakültesi Dergisi, 537-559. <a class="doi" href="https://doi.org/10.31123/akil.527422" target="_blank" rel="noopener">doi:10.31123/akil.527422</a></div></li>
+<li><span class="yil">2019</span><div>Aydın, B. O. ve Gürbüz, S. <em>Sosyal medya kullanımının kurum çalışanlarının olumlu elektronik ağızdan ağıza iletişimine etkisinin yol analizi ile incelenmesi: Aile ve Sosyal Politikalar Bakanlığında bir uygulama</em>. Selçuk Üniversitesi İletişim Fakültesi Akademik Dergisi, 12(1), 22-41. <a class="doi" href="https://doi.org/10.18094/josc.457683" target="_blank" rel="noopener">doi:10.18094/josc.457683</a></div></li>
+<li><span class="yil">2019</span><div>Gürbüz, S. <em>Bir siyasal iletişim aracı olarak yeni medya: 2017 halkoylamasında AK Parti YouTube videoları üzerine göstergebilimsel bir çalışma</em>. Anemon Muş Alparslan Üniversitesi Sosyal Bilimler Dergisi, 7(1), 203-210. <a class="doi" href="https://doi.org/10.18506/anemon.425022" target="_blank" rel="noopener">doi:10.18506/anemon.425022</a></div></li>
+<li><span class="yil">2018</span><div>Gürbüz, S. <em>Kurumsal imaj oluşturmada kurumsal sosyal sorumluluk faaliyetleri: İzlenim yönetimi taktiklerinin YouTube videolarında kullanımı</em>. Konya Sanat, 1(1), 28-41.</div></li>
+<li><span class="yil">2018</span><div>Gürbüz, S. ve Aydın, B. O. <em>İslami inanç destinasyonlarının tanıtımında YouTube videolarının kullanımı</em>. Gümüşhane Üniversitesi İletişim Fakültesi Elektronik Dergisi, 6(1), 539-568. <a class="doi" href="https://doi.org/10.19145/e-gifder.369922" target="_blank" rel="noopener">doi:10.19145/e-gifder.369922</a></div></li>
+<li><span class="yil">2018</span><div>Aydın, B. O. ve Gürbüz, S. <em>Türkiye&#x27;de kadınların karşılaştığı sorunlar ve köprü ağ analizi yöntemiyle incelenmesi</em>. Anemon Muş Alparslan Üniversitesi Sosyal Bilimler Dergisi, 6(4), 579-586. <a class="doi" href="https://doi.org/10.18506/anemon.381770" target="_blank" rel="noopener">doi:10.18506/anemon.381770</a></div></li>
+<li><span class="yil">2018</span><div>Duğan, Ö. ve Gürbüz, S. <em>Suriyeli sığınmacıların sosyal entegrasyonuna yönelik bir araştırma</em>. Turkish Studies Social Sciences, 13(26), 529-546. <a class="doi" href="https://doi.org/10.7827/TurkishStudies.14625" target="_blank" rel="noopener">doi:10.7827/TurkishStudies.14625</a></div></li>
+<li><span class="yil">2017</span><div>Gürbüz, S. ve Duğan, Ö. <em>Sığınmacılarda sağlık iletişimi: Suriyeli öğretmenler üzerine bir çalışma</em>. Uluslararası Akademik Bakış Dergisi, 479-490.</div></li>
+<li><span class="yil">2017</span><div>Gürbüz, S. <em>İç paydaş kurumsal imaj algısı: Milli Eğitim Bakanlığı örneği</em>. The Journal of Academic Social Sciences, 280-299. <a class="doi" href="https://doi.org/10.16992/ASOS.11970" target="_blank" rel="noopener">doi:10.16992/ASOS.11970</a></div></li>
+<li><span class="yil">2017</span><div>Aydın, B. O., Duğan, Ö. ve Gürbüz, S. <em>Gastronomi TV programı kaynaklı turizm: Gaziantep örneği</em>. MANAS Sosyal Araştırmalar Dergisi, 6(5), 33-48.</div></li>
+      </ul></details>
+      <h3>Kitap bölümleri</h3>
+      <details><summary>20 kitap bölümünü göster</summary>
+      <ul class="cizelge">
+<li><span class="yil">2025</span><div>Aydın, B. O. ve Gürbüz, S. <em>Görsel iletişim tasarımı perspektifinden auteur olmak ve auteur eleştiri</em>. <span class="kitapad">Eleştirel Yaklaşımlar ve Analizler</span>, Akademisyen Kitabevi.</div></li>
+<li><span class="yil">2025</span><div>Gürbüz, S., Koçak, M. C. ve Küçük, O. <em>Albert Camus&#x27;tan uyarlanan Yazgı filminde Nietzsche izleri: Zeki Demirkubuz sinemasında kadın, aşk ve evlilik kurumu</em>. <span class="kitapad">21. Yüzyılın İlk Çeyreğinde Türk Sineması: Dönüşümler, Temsiller ve Yön Verenler</span>, UBAK.</div></li>
+<li><span class="yil">2024</span><div>Gürbüz, S. ve Aydın, B. O. <em>Online algı yönetimi ve manipülasyon: İsrail Savunma Kuvvetleri örneğinde bir analiz</em>. <span class="kitapad">Dijitalleşmenin Teknolojik Boyutu</span>, Nobel.</div></li>
+<li><span class="yil">2024</span><div>Arslan, E., Gürbüz, S. ve Aydın, B. O. <em>2000 sonrası sinemada yapay zekânın temsili</em>. <span class="kitapad">Dijital İletişimi Anlamak 5</span>, Palet Yayınları.</div></li>
+<li><span class="yil">2024</span><div>Gürbüz, S., Aydın, B. O. ve Karakoç, E. <em>Etkili anket hazırlama</em>. <span class="kitapad">Örneklerle Sosyal Bilimlerde Araştırma Yöntemleri</span>, Akademisyen Yayınevi.</div></li>
+<li><span class="yil">2024</span><div>Aydın, B. O. ve Gürbüz, S. <em>Çocuklara yönelik dijital reklamcılık, etik tartışmalar ve düzenlemeler</em>. <span class="kitapad">Dijitalleşen Dünyada Reklamcılık ve Etik</span>, Eğitim Yayınevi.</div></li>
+<li><span class="yil">2024</span><div>Gürbüz, S., Aydın, B. O. ve Onurlucan, Ö. <em>Amarcord filmi örneğinde faşizm, toplumsal kurumlar ve kadın temsilleri</em>. <span class="kitapad">Sinema Araştırmaları ve Film Çözümlemeleri</span>, Palet Yayınevi.</div></li>
+<li><span class="yil">2023</span><div>Gürbüz, S. ve Doğan, B. H. <em>Kierkegaard&#x27;ın felsefesinde birey olmanın konumu: Boulogne Ormanı Kadınları, Taşra Papazı&#x27;nın Günlüğü ve Jeanne d&#x27;Arc&#x27;ın Tutkusu filmleri</em>. <span class="kitapad">Sinema Felsefesi</span>, Nobel.</div></li>
+<li><span class="yil">2023</span><div>Gürbüz, S. <em>Medya okuryazarlığından tarım okuryazarlığına</em>. <span class="kitapad">2. Küresel Tarım Forumu</span>, Kültür A.Ş..</div></li>
+<li><span class="yil">2022</span><div>Gürbüz, S. ve Doğan, B. H. <em>Sosyolojik eleştiri bağlamında Kızım ve Ben ve Bisiklet Hırsızları filmleri örneğinde sinemanın çocuğu</em>. <span class="kitapad">Sinema Toplum İlişkileri Üzerine Çözümlemeler</span>, Nobel.</div></li>
+<li><span class="yil">2022</span><div>Gürbüz, S. <em>Hz. Muhammed dönemi örneğinde sözlü şiirin siyasal iletişim amaçlı kullanımı</em>. <span class="kitapad">A&#x27;dan Z&#x27;ye İletişim Çalışmaları 7</span>, İksad Yayınevi.</div></li>
+<li><span class="yil">2021</span><div>Gürbüz, S. ve Tarhan, A. <em>Ticari karakter olarak maskotların kurumsal kimlikle ilişkisi: Konya örneğinde bir araştırma</em>. <span class="kitapad">21. Yüzyıl Medya Çalışmaları</span>, Tablet Kitabevi.</div></li>
+<li><span class="yil">2021</span><div>Gürbüz, S. ve Aydın, B. O. <em>Siyasal kampanya videolarında çocuk rolü: Çocuk, kime hangi amaçla ne söyler?</em>. <span class="kitapad">Siyasal İletişim: Uygulamalı Tartışmalar</span>, Nobel Akademik Yayıncılık.</div></li>
+<li><span class="yil">2021</span><div>Gürbüz, S. ve Doğan, B. H. <em>Siyasal iletişimin aktörleri</em>. <span class="kitapad">Siyasal İletişim: Teorik Tartışmalar</span>, Nobel Akademik Yayıncılık.</div></li>
+<li><span class="yil">2021</span><div>Tarhan, A. ve Gürbüz, S. <em>Kültür endüstrisi bağlamında Mevlevilik ve sema</em>. <span class="kitapad">Kültür Odaklı Halkla İlişkiler ve Reklam</span>, Literatürk Academia.</div></li>
+<li><span class="yil">2020</span><div>Gürbüz, S. <em>Sosyal sorumlu blog yazarlığı</em>. <span class="kitapad">Dijital Çağın Okuryazar Bireyleri</span>, Konya MEB Yayınları.</div></li>
+<li><span class="yil">2020</span><div>Gürbüz, S. ve Aydın, B. O. <em>Yeni toplumsal hareketler ve Twitter ilişkisi: #boycottpuma örneği</em>. <span class="kitapad">Toplumsal Hareketler ve Medya</span>, Literatürk Academia.</div></li>
+<li><span class="yil">2019</span><div>Gürbüz, S. <em>The use of digital storytelling as a public relations tool for corporate reputation: The sample of Tat Gıda farmer stories</em>. <span class="kitapad">Public Relations in the Networked Publics</span>, Peter Lang.</div></li>
+<li><span class="yil">2018</span><div>Gürbüz, S. <em>The use of new communication technologies in impression management for digital publicity: A study on Turkey Home project</em>. <span class="kitapad">Public Relations and Advertising Theories: Concepts and Practices</span>, Peter Lang.</div></li>
+<li><span class="yil">2017</span><div>Gürbüz, S. <em>Survey as a quantitative research method</em>. <span class="kitapad">Research Methods and Techniques in Public Relations and Advertising</span>, Peter Lang.</div></li>
+      </ul></details>
+      <h3>Bildiriler</h3>
+      <details><summary>11 bildiriyi göster</summary>
+      <ul class="cizelge">
+<li><span class="yil">2023</span><div>Gürbüz, S. <em>Sponsorship of genocide: Social media reflection of boycotted companies during the Israeli attacks on Gaza</em>. 10th International Başkent Congress on Humanities and Social Sciences.</div></li>
+<li><span class="yil">2022</span><div>Gürbüz, S. <em>Ebeveyn ve çocuk iletişiminde iletişim engellerinin Sen Hiç Ateş Böceği Gördün mü? filmi örneğinde incelenmesi</em>. Anadolu 11th International Conference on Social Science.</div></li>
+<li><span class="yil">2021</span><div>Gürbüz, S. <em>Siyasal bir ileti olarak şiir: Bedir ve Uhud şiirleri örneği</em>. Uluslararası İletişim Bilimleri Sempozyumu.</div></li>
+<li><span class="yil">2019</span><div>Gürbüz, S. <em>Sosyal medyada kurumsal izlenim yönetimi: #TenYearChallenge akımı</em>. 3. Uluslararası Mersin Sempozyumu.</div></li>
+<li><span class="yil">2018</span><div>Gürbüz, S. <em>Bir siyasal iletişim aracı olarak yeni medya: 2017 halkoylamasında AK Parti YouTube videoları üzerine göstergebilimsel bir çalışma</em>. 16th International Symposium Communication in the Millennium.</div></li>
+<li><span class="yil">2018</span><div>Gürbüz, S. <em>Siyasi lider imajında fotoğrafın rolü: 2017 halkoylamasında liderlerin sosyal medya fotoğraflarının göstergebilimsel analizi</em>. Gelenekselden Dijitale Uluslararası Medya Araştırmaları Sempozyumu.</div></li>
+<li><span class="yil">2018</span><div>Gürbüz, S. <em>Sağlık personeli imajının sığınmacılar tarafından değerlendirilmesi: Konya&#x27;da yaşayan Suriyeli sığınmacı kadınlar örneği</em>. 4. Sağlık İletişimi Sempozyumu.</div></li>
+<li><span class="yil">2017</span><div>Aydın, B. O., Duğan, Ö. ve Gürbüz, S. <em>Gastronomi TV programı kaynaklı turizm: Gaziantep örneği</em>. 3. Uluslararası Türk Dünyası Turizm Sempozyumu.</div></li>
+<li><span class="yil">2017</span><div>Gürbüz, S. ve Aydın, B. O. <em>Siyasal kampanyalarda iletişim aracı olarak sosyal medya: 2017 anayasa değişikliği halkoylamasında siyasi liderlerin Instagram kullanımları</em>. 2. Uluslararası İletişim Bilimi ve Medya Araştırmaları Kongresi.</div></li>
+<li><span class="yil">2017</span><div>Aydın, B. O. ve Gürbüz, S. <em>Türkiye&#x27;de kadınların karşılaştığı sorunlar ve köprü ağ analizi yöntemiyle incelenmesi</em>. 2. Uluslararası İletişim Bilimi ve Medya Araştırmaları Kongresi.</div></li>
+<li><span class="yil">2016</span><div>Gürbüz, S. ve Aydın, B. O. <em>Göçmenlerin kültürler arası ortamda kişilerarası çatışma pratikleri ve çözüm stratejileri</em>. 2. Uygulamalı Bilimler Kongresi: Göç, Yoksulluk ve İstihdam.</div></li>
+      </ul></details>
+    </section>
+
+    <section id="tezler">
+      <h2>Tez danışmanlığı</h2>
+      <ul class="cizelge">
+<li><span class="yil">Sürüyor</span><div><em>Darren Aronofsky filmlerinde öznenin parçalanışı: Black Swan ve Mother! filmleri üzerine göstergebilimsel ve psikanalitik bir çözümleme</em><span class="alt">Yüksek lisans</span></div></li>
+<li><span class="yil">Sürüyor</span><div><em>Steven Spielberg filmlerinde türsel farklılıklara göre film müziklerinin karşılaştırmalı incelemesi</em><span class="alt">Yüksek lisans</span></div></li>
+<li><span class="yil">Sürüyor</span><div><em>Çerçeveleme kuramı perspektifinde İsrail-Filistin çatışmalarının analizi: Şalom gazetesi örneği</em><span class="alt">Yüksek lisans</span></div></li>
+<li><span class="yil">Sürüyor</span><div><em>Stanley Kubrick&#x27;in Dr. Garipaşk filmi üzerinden Soğuk Savaş ideolojisini çözümleme</em><span class="alt">Yüksek lisans</span></div></li>
+<li><span class="yil">Sürüyor</span><div><em>Sinemada Filistin-İsrail meselesi: İdeolojik göstergeler üzerinden karşılaştırmalı analiz</em><span class="alt">Yüksek lisans</span></div></li>
+<li><span class="yil">Sürüyor</span><div><em>SEO ve SEM stratejilerinin siyasal iletişimde kullanımı: 2024 yerel seçimleri büyükşehir belediye başkan adayları örneği</em><span class="alt">Yüksek lisans</span></div></li>
+<li><span class="yil">2026</span><div><em>Hannah Arendt&#x27;in kötülüğün sıradanlığı kavramı kapsamında Jonathan Glazer&#x27;ın İlgi Alanı film incelemesi</em><span class="alt">Yüksek lisans, tamamlandı</span></div></li>
+<li><span class="yil">2026</span><div><em>The Investigation dizisi örneğinde polis kimliğinin inşası: Erving Goffman&#x27;ın benlik sunumu kuramı üzerinden bir inceleme</em><span class="alt">Yüksek lisans, tamamlandı</span></div></li>
+<li><span class="yil">2026</span><div><em>Yönetmen Hüseyin Aydemir filmleri örneğinde derviş temsili</em><span class="alt">Yüksek lisans, tamamlandı</span></div></li>
+<li><span class="yil">2026</span><div><em>Baas rejimi sonrası Suriye: Türk ulusal basınındaki fotoğrafların semiyolojik analizi</em><span class="alt">Yüksek lisans, tamamlandı</span></div></li>
+<li><span class="yil">2025</span><div><em>Türk sinemasında absürt komedi: Mahmut Fazıl Coşkun sineması üzerine bir inceleme</em><span class="alt">Yüksek lisans, tamamlandı</span></div></li>
+<li><span class="yil">2024</span><div><em>İran sinemasında bir auteur: Cafer Panahi</em><span class="alt">Yüksek lisans, tamamlandı</span></div></li>
+<li><span class="yil">2023</span><div><em>Türkiye&#x27;de yayın yapan ulusal haber kanallarında diksiyon analizi: Ana haber bültenleri</em><span class="alt">Yüksek lisans, tamamlandı</span></div></li>
+      </ul>
+    </section>
+
+    <section id="dersler">
+      <h2>Verdiği dersler</h2>
+      <h3>Yüksek lisans</h3>
+      <ul class="etiketler"><li>Medya ve Sinemada Göstergebilim</li><li>Etkili İletişim, Retorik ve İkna</li><li>Eleştirel Yaklaşımlar ve Sinema</li><li>Sinema, Siyaset ve İktidar</li><li>Anlatı Kuramı ve Analizi</li><li>Reklam Okumaları</li><li>İmaj Yönetimi ve Görsellik</li><li>Yeni Medyada Kurumsal Kimlik Yönetimi</li><li>Sanat, Propaganda ve Kitle İletişim</li></ul>
+      <h3>Lisans</h3>
+      <ul class="etiketler"><li>Göstergebilim</li><li>İletişim Psikolojisi</li><li>Fonetik ve Diksiyon</li><li>Spikerlik ve Sunuculuk</li><li>Radyo Program Yapımı</li><li>Mekân ve Sinema</li><li>Kültürel Çalışmalar ve Sinema</li><li>Popüler Sinema ve Türler</li><li>Halkla İlişkiler</li><li>Siyasal İletişim</li><li>İletişim Teknikleri</li><li>Etkili İletişim Teknikleri</li><li>Sosyal Medya Yönetimi</li><li>Yeni Medyada İçerik Üretimi</li><li>Medya Analizleri</li><li>Medya Antropolojisi</li><li>Medya Okuryazarlığı</li><li>İletişim Hukuku</li><li>Akademik Yazım</li><li>İmaj Yönetimi</li><li>Marka ve Etkili Marka Yönetimi</li><li>Reklam Analizi</li><li>Görsel Kültür</li><li>Sanat Sosyolojisi</li><li>Kent ve Kültür</li><li>Medya ve İletişim</li><li>İngilizce I-II</li></ul>
+    </section>
+  </main>
+</div>
+<footer>© 2026 Salih Gürbüz · <a href="index.html">salihgurbuz.com</a></footer>
+</body>
+</html>
