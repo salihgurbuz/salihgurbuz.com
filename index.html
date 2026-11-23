@@ -104,6 +104,8 @@ section.bolum{padding:56px 0;border-top:1px solid var(--cizgi)}
 .kronoloji div::before{content:"";position:absolute;left:-6px;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--gul)}
 .kronoloji dt{font-weight:600;color:var(--lacivert);font-variant-numeric:tabular-nums}
 .kronoloji dd{margin:0}
+.oynatici{position:relative;width:100%;max-width:820px;aspect-ratio:16/9;background:var(--lacivert);border-radius:6px;overflow:hidden;box-shadow:0 1px 0 var(--cizgi)}
+.oynatici iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .kitap-baglanti{display:inline-block;margin-top:10px;font-weight:600;font-size:.92rem}
 .kitap h3{font-size:1.25rem;font-weight:500;font-style:italic}
 .kitap .kunye{color:var(--soluk);font-size:.95rem;margin:6px 0 0}
@@ -153,6 +155,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <nav aria-label="Bölümler">
       <ul>
         <li><a href="#hakkinda">Hakkında</a></li>
+        <li><a href="#dinle">Dinle</a></li>
         <li><a href="#kitaplar">Kitaplar</a></li>
         <li><a href="#radyo">Radyo</a></li>
         <li><a href="#yazilar">Yazılar</a></li>
@@ -178,7 +181,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="ozet">İletişimi insanın kendisiyle, başkalarıyla ve toplumla kurduğu ilişkinin merkezinde gören bir akademisyen ve radyocu. Medya söylemlerini çözümlüyor, iletişimin psikolojisini yazıyor, mikrofonun başında bu soruları dinleyicilerle paylaşıyor.</p>
         <div class="dugmeler">
           <a class="dugme dolu" href="#kitaplar">Kitaplar</a>
-          <a class="dugme bos" href="#radyo">Radyo programları</a>
+          <a class="dugme bos" href="#dinle">▶ Sesimi dinleyin</a>
         </div>
       </div>
     </div>
@@ -206,6 +209,17 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <li>Eleştirel söylem analizi</li>
         <li>Radyo yayıncılığı</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="bolum" id="dinle">
+    <div class="kap">
+      <h2>Dinle ve izle</h2>
+      <p class="giris-metni">İletişim Günlüğü kanalından seçilmiş kayıtlar. Oynat düğmesine bastığınızda liste sırayla çalar.</p>
+      <div class="oynatici">
+        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLpmNT3Atl_fx6WvcMI9XJkXj-Gzmn7KCg" title="Salih Gürbüz, İletişim Günlüğü oynatma listesi" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="tumu"><a href="https://www.youtube.com/playlist?list=PLpmNT3Atl_fx6WvcMI9XJkXj-Gzmn7KCg" target="_blank" rel="noopener">Listenin tamamını YouTube'da aç</a></p>
     </div>
   </section>
 
