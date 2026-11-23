@@ -35,14 +35,18 @@ h1,h2,h3{font-family:var(--f-baslik);color:var(--lacivert);line-height:1.2;text-
 
 /* Üst bar */
 header.ust{border-bottom:1px solid var(--cizgi);background:var(--zemin);position:sticky;top:0;z-index:5}
-.ust .kap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
-.marka{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--lacivert)}
+.ust .kap{display:flex;align-items:center;justify-content:flex-end;gap:16px 22px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.marka{margin-right:auto;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--lacivert)}
 .marka img{height:58px;width:auto}
 .marka .ad{font-family:var(--f-baslik);font-weight:600;letter-spacing:.08em;font-size:1.05rem}
 .marka .alt{display:block;font-family:var(--f-govde);font-size:.72rem;letter-spacing:.18em;color:var(--soluk);font-weight:600}
 nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--metin)}
 nav a:hover{color:var(--gul)}
+
+.sosyal{display:flex;gap:6px;align-items:center}
+.sosyal a{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--cizgi);color:var(--lacivert);background:var(--kagit)}
+.sosyal a:hover{color:var(--kagit);background:var(--gul);border-color:var(--gul)}
 
 /* Giriş */
 .giris{padding:56px 0 48px}
@@ -156,6 +160,10 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <li><a href="#iletisim">İletişim</a></li>
       </ul>
     </nav>
+    <div class="sosyal">
+      <a href="https://www.youtube.com/@iletisimgunlugu" target="_blank" rel="noopener" aria-label="YouTube: İletişim Günlüğü" title="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg></a>
+      <a href="https://www.instagram.com/dr.salihgurbuz/" target="_blank" rel="noopener" aria-label="Instagram: dr.salihgurbuz" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+    </div>
   </div>
 </header>
 
@@ -427,6 +435,14 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <div>
           <span class="etiket">E-posta</span>
           <a href="mailto:sgurbuz@erbakan.edu.tr">sgurbuz@erbakan.edu.tr</a>
+        </div>
+        <div>
+          <span class="etiket">Instagram</span>
+          <a href="https://www.instagram.com/dr.salihgurbuz/" target="_blank" rel="noopener">@dr.salihgurbuz</a>
+        </div>
+        <div>
+          <span class="etiket">YouTube</span>
+          <a href="https://www.youtube.com/@iletisimgunlugu" target="_blank" rel="noopener">@iletisimgunlugu</a>
         </div>
         <div>
           <span class="etiket">Kurum</span>
