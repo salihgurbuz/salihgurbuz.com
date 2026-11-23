@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doç. Dr. Salih Gürbüz</title>
+<meta name="description" content="Doç. Dr. Salih Gürbüz — Necmettin Erbakan Üniversitesi Radyo, Televizyon ve Sinema Bölümü. İletişim, medya çalışmaları, radyo ve kitaplar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Düzen: dar okuma sütunu, ana sayfada portre + kimlik; bölümler ince çizgilerle ayrılır. Marka: lacivert (akıl), gül kurusu (duygu), krem zemin. */
+:root{
+  --zemin:#faf6eb;
+  --kagit:#fffdf8;
+  --lacivert:#1f2a4a;
+  --gul:#b5475e;
+  --metin:#2b2d33;
+  --soluk:#6b6a6f;
+  --cizgi:#ddd3c2;
+  --f-baslik:"Fraunces", Georgia, "Times New Roman", serif;
+  --f-govde:"Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--zemin);color:var(--metin);font:400 1.0625rem/1.65 var(--f-govde)}
+img{max-width:100%;display:block}
+a{color:var(--lacivert);text-decoration-color:var(--gul);text-underline-offset:3px}
+a:hover{color:var(--gul)}
+a:focus-visible{outline:2px solid var(--gul);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--f-baslik);color:var(--lacivert);line-height:1.2;text-wrap:balance;margin:0}
+.kap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* Üst bar */
+header.ust{border-bottom:1px solid var(--cizgi);background:var(--zemin);position:sticky;top:0;z-index:5}
+.ust .kap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.marka{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--lacivert)}
+.marka img{height:58px;width:auto}
+.marka .ad{font-family:var(--f-baslik);font-weight:600;letter-spacing:.08em;font-size:1.05rem}
+.marka .alt{display:block;font-family:var(--f-govde);font-size:.72rem;letter-spacing:.18em;color:var(--soluk);font-weight:600}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--metin)}
+nav a:hover{color:var(--gul)}
+
+/* Giriş */
+.giris{padding:56px 0 48px}
+.giris .kap{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:48px;align-items:center}
+.portre{border-radius:4px;box-shadow:0 1px 0 var(--cizgi), 12px 12px 0 var(--lacivert)}
+.unvan{font-weight:600;letter-spacing:.14em;font-size:.8rem;color:var(--gul);text-transform:uppercase;margin:0 0 10px}
+.giris h1{font-size:clamp(2.1rem,4.5vw,3.1rem);font-weight:600}
+.giris .gorev{font-size:1.1rem;color:var(--soluk);margin:12px 0 20px;max-width:52ch}
+.giris p.ozet{max-width:60ch;margin:0 0 24px}
+.dugmeler{display:flex;gap:12px;flex-wrap:wrap}
+.dugme{display:inline-block;padding:10px 18px;border-radius:3px;font-weight:600;text-decoration:none;border:1.5px solid var(--lacivert)}
+.dugme.dolu{background:var(--lacivert);color:var(--kagit)}
+.dugme.dolu:hover{background:var(--gul);border-color:var(--gul);color:var(--kagit)}
+.dugme.bos{color:var(--lacivert)}
+.dugme.bos:hover{border-color:var(--gul);color:var(--gul)}
+
+/* Bölümler */
+section.bolum{padding:56px 0;border-top:1px solid var(--cizgi)}
+.bolum h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:500;margin-bottom:8px;display:flex;align-items:baseline;gap:12px}
+.bolum h2::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gul);flex:none;transform:translateY(-4px)}
+.bolum .giris-metni{color:var(--soluk);max-width:62ch;margin:0 0 28px}
+.metin p{max-width:66ch}
+
+.alanlar{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:20px 0 0}
+.alanlar li{border:1px solid var(--cizgi);background:var(--kagit);padding:6px 12px;border-radius:999px;font-size:.92rem}
+
+/* Kitaplar */
+.kitap-duzen{display:grid;grid-template-columns:1fr minmax(0,380px);gap:36px;align-items:start}
+.kitaplar{display:grid;gap:16px}
+.kitap{background:var(--kagit);border:1px solid var(--cizgi);padding:16px;display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center}
+.kitap img{width:96px;height:auto;box-shadow:0 2px 6px rgba(31,42,74,.18)}
+.kitap .altbaslik{margin:4px 0 0;font-size:.98rem}
+.alt-baslik{font-size:1.3rem;font-weight:500;margin:40px 0 16px}
+.kitaplar.editorlu{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.bolumler{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:20px}
+.bolum-kitap img{width:100%;height:auto;box-shadow:0 2px 6px rgba(31,42,74,.18);margin-bottom:10px}
+.bolum-kitap h4{font-family:var(--f-baslik);font-weight:500;font-size:1rem;color:var(--lacivert);margin:0;line-height:1.3;text-wrap:balance}
+.bolum-kitap .kunye{font-size:.85rem;margin:4px 0 0}
+.tumu{margin:20px 0 0;font-weight:600}
+.yazilar{list-style:none;margin:0;padding:0;border-top:1px solid var(--cizgi);max-width:760px}
+.yazilar li{display:flex;justify-content:space-between;align-items:baseline;gap:6px 20px;flex-wrap:wrap;padding:14px 0;border-bottom:1px solid var(--cizgi)}
+.yazilar a{font-family:var(--f-baslik);font-size:1.1rem;text-decoration:none}
+.yazilar a:hover{text-decoration:underline}
+.yazilar .dergi{font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gul)}
+.youtube{display:grid;grid-template-columns:minmax(0,1.6fr) 1fr;margin-top:16px;background:var(--kagit);border:1px solid var(--cizgi);text-decoration:none;color:var(--metin);overflow:hidden}
+.youtube img{width:100%;height:100%;object-fit:cover}
+.yt-metin{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:18px 22px}
+.yt-metin .kanal{font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gul)}
+.yt-metin strong{font-family:var(--f-baslik);font-weight:500;font-size:1.25rem;color:var(--lacivert)}
+.yt-metin span:last-child{font-size:.92rem;color:var(--soluk)}
+.youtube:hover{border-color:var(--gul)}
+@media (max-width:640px){.youtube{grid-template-columns:1fr}}
+.kronoloji{margin:28px 0 8px;max-width:640px;border-left:2px solid var(--cizgi);display:grid;gap:12px}
+.kronoloji div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding-left:18px;position:relative}
+.kronoloji div::before{content:"";position:absolute;left:-6px;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--gul)}
+.kronoloji dt{font-weight:600;color:var(--lacivert);font-variant-numeric:tabular-nums}
+.kronoloji dd{margin:0}
+.kitap-baglanti{display:inline-block;margin-top:10px;font-weight:600;font-size:.92rem}
+.kitap h3{font-size:1.25rem;font-weight:500;font-style:italic}
+.kitap .kunye{color:var(--soluk);font-size:.95rem;margin:6px 0 0}
+figure{margin:0}
+figure img{border-radius:4px}
+figcaption{font-size:.85rem;color:var(--soluk);margin-top:8px}
+
+/* Radyo */
+.programlar{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.program{background:var(--kagit);border:1px solid var(--cizgi);padding:20px 22px;display:flex;flex-direction:column;gap:6px}
+.program .kanal{font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gul)}
+.program h3{font-size:1.2rem;font-weight:500}
+.program .sayi{font-variant-numeric:tabular-nums;color:var(--soluk);font-size:.95rem}
+
+/* Yayınlar */
+.baglantilar{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.baglanti{display:block;background:var(--kagit);border:1px solid var(--cizgi);padding:18px 20px;text-decoration:none;color:var(--metin)}
+.baglanti strong{display:block;font-family:var(--f-baslik);font-weight:500;color:var(--lacivert);font-size:1.15rem}
+.baglanti span{font-size:.92rem;color:var(--soluk)}
+.baglanti:hover{border-color:var(--gul)}
+.baglanti:hover strong{color:var(--gul)}
+
+/* İletişim + alt */
+.iletisim-satir{display:flex;flex-wrap:wrap;gap:12px 32px}
+.iletisim-satir div{min-width:220px}
+.etiket{display:block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--soluk)}
+footer{border-top:1px solid var(--cizgi);padding:28px 0;color:var(--soluk);font-size:.9rem}
+footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.nun{font-size:1.3rem;color:var(--lacivert)}
+
+@media (max-width:760px){
+  .giris{padding:36px 0}
+  .giris .kap{grid-template-columns:1fr;gap:32px}
+  .portre{max-width:260px}
+  .kitap-duzen{grid-template-columns:1fr}
+  nav ul{gap:12px}
+}
+</style>
+</head>
+<body>
+
+<header class="ust">
+  <div class="kap">
+    <a class="marka" href="#" aria-label="Salih Gürbüz ana sayfa">
+      <img src="img/logo.jpg" alt="Salih Gürbüz, Otonom Bilim İnsanı" width="600" height="211">
+    </a>
+    <nav aria-label="Bölümler">
+      <ul>
+        <li><a href="#hakkinda">Hakkında</a></li>
+        <li><a href="#kitaplar">Kitaplar</a></li>
+        <li><a href="#radyo">Radyo</a></li>
+        <li><a href="#yazilar">Yazılar</a></li>
+        <li><a href="#yayinlar">Yayınlar</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="giris">
+    <div class="kap">
+      <img class="portre" src="img/portre.jpg" alt="Doç. Dr. Salih Gürbüz" width="614" height="800">
+      <div>
+        <p class="unvan">Doç. Dr.</p>
+        <h1>Salih Gürbüz</h1>
+        <p class="gorev">Necmettin Erbakan Üniversitesi, Radyo, Televizyon ve Sinema Bölüm Başkanı</p>
+        <p class="ozet">İletişimi insanın kendisiyle, başkalarıyla ve toplumla kurduğu ilişkinin merkezinde gören bir akademisyen ve radyocu. Medya söylemlerini çözümlüyor, iletişimin psikolojisini yazıyor, mikrofonun başında bu soruları dinleyicilerle paylaşıyor.</p>
+        <div class="dugmeler">
+          <a class="dugme dolu" href="#kitaplar">Kitaplar</a>
+          <a class="dugme bos" href="#radyo">Radyo programları</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum" id="hakkinda">
+    <div class="kap metin">
+      <h2>Hakkında</h2>
+      <p>Doç. Dr. Salih Gürbüz, Necmettin Erbakan Üniversitesi Güzel Sanatlar ve Mimarlık Fakültesi'nde görev yapan bir akademisyen, yazar ve radyocudur. Radyo, Televizyon ve Sinema Bölümü'nün başkanlığını yürütmekte, Film Tasarımı ve Yönetmenliği Anasanat Dalı'nda ders vermektedir. Yüksek lisans ve doktora eğitimini Selçuk Üniversitesi Sosyal Bilimler Enstitüsü'nde, Halkla İlişkiler ve Tanıtım alanında tamamlamıştır.</p>
+      <p>Çalışmaları kurum imajı ve halkla ilişkilerden siyasal iletişime, sinema kuramlarından dijital medyaya ve iletişim psikolojisine uzanır. Medya metinlerini eleştirel söylem analizi ve çerçeveleme gibi yöntemlerle incelemektedir.</p>
+      <p>Akademik çalışmalarının yanında yirmi beş yılı aşkın radyo deneyimiyle yayıncılığı sürdürmektedir. Radyoda, YouTube kanalında ve televizyon programlarında iletişim, teknoloji bağımlılığı ve psikoloji üzerine içerikler hazırlamaktadır. <em>Hakimiyet</em> ve <em>Milli Gazete</em>'de yazıları yayımlanmış, <em>Ribat</em> ve <em>Gönül</em> dergilerinde yazmaktadır.</p>
+      <dl class="kronoloji">
+        <div><dt>2004-2005</dt><dd><em>Anadolu'nun Sesi</em> dergisi, genel yayın yönetmeni</dd></div>
+        <div><dt>2017</dt><dd>Doktor öğretim üyesi</dd></div>
+        <div><dt>2020</dt><dd>Doçent</dd></div>
+        <div><dt>Bugün</dt><dd>Necmettin Erbakan Üniversitesi, Radyo, Televizyon ve Sinema Bölüm Başkanı</dd></div>
+      </dl>
+      <ul class="alanlar" aria-label="Çalışma alanları">
+        <li>Kurum imajı</li>
+        <li>Halkla ilişkiler</li>
+        <li>Siyasal iletişim</li>
+        <li>Sinema kuramları</li>
+        <li>Dijital medya</li>
+        <li>İletişim psikolojisi</li>
+        <li>Eleştirel söylem analizi</li>
+        <li>Radyo yayıncılığı</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bolum" id="kitaplar">
+    <div class="kap">
+      <h2>Kitaplar</h2>
+      <p class="giris-metni">Tek yazarlı ve editörlü kitaplar, kitap bölümleri.</p>
+      <div class="kitap-duzen">
+        <div class="kitaplar">
+          <article class="kitap">
+            <img src="img/kapak-iletisimin-psikolojisi.jpg" alt="İletişimin Psikolojisi kitap kapağı" width="300" height="520" loading="lazy">
+            <div>
+              <h3>İletişimin Psikolojisi</h3>
+              <p class="altbaslik">Benlik, İlişkiler ve Toplumsal Bağlam</p>
+              <p class="kunye">Palet Yayınları, 2025</p>
+              <a class="kitap-baglanti" href="https://share.google/N3OmLqiKte5thqWc0" target="_blank" rel="noopener">Satın al</a>
+            </div>
+          </article>
+          <article class="kitap">
+            <img src="img/kapak-en-buyuk-meselemiz.jpg" alt="En Büyük Meselemiz: İlet-İşim kitap kapağı" width="285" height="520" loading="lazy">
+            <div>
+              <h3>En Büyük Meselemiz: İlet-İşim</h3>
+              <p class="altbaslik">Kişilerarası İlişkilerde ve Sosyal Medyada İletişim</p>
+              <p class="kunye">Literatürk Academia</p>
+            </div>
+          </article>
+          <article class="kitap">
+            <img src="img/kapak-kurum-imaji.jpg" alt="Kurum İmajı kitap kapağı" width="335" height="520" loading="lazy">
+            <div>
+              <h3>Kurum İmajı</h3>
+              <p class="altbaslik">Bileşenleri ve Belirleyicileri</p>
+              <p class="kunye">Literatürk Academia</p>
+              <a class="kitap-baglanti" href="https://share.google/IGMIdwq5dF1j14ve4" target="_blank" rel="noopener">Satın al</a>
+            </div>
+          </article>
+        </div>
+        <figure>
+          <img src="img/imza.jpg" alt="Salih Gürbüz, Konya Kitap Günleri'nde kitap imzalarken" width="900" height="900" loading="lazy">
+          <figcaption>Konya Kitap Günleri, imza masası</figcaption>
+        </figure>
+      </div>
+      <h3 class="alt-baslik">Editörlü kitaplar</h3>
+      <div class="kitaplar editorlu">
+        <article class="kitap">
+          <img src="img/kapak-iletisim-ve-sanat.jpg" alt="21. Yüzyılda İletişim ve Sanat kitap kapağı" width="360" height="540" loading="lazy">
+          <div>
+            <h3>21. Yüzyılda İletişim ve Sanat</h3>
+            <p class="altbaslik">Editör: Salih Gürbüz</p>
+            <p class="kunye">NEÜ Yayınları</p>
+            <a class="kitap-baglanti" href="https://share.google/h1XvUDgKiWBC1W248" target="_blank" rel="noopener">Kitabı incele</a>
+          </div>
+        </article>
+        <article class="kitap">
+          <img src="img/kapak-elestirel-yaklasimlar.jpg" alt="Eleştirel Yaklaşımlar ve Analizler kitap kapağı" width="360" height="530" loading="lazy">
+          <div>
+            <h3>Eleştirel Yaklaşımlar ve Analizler</h3>
+            <p class="altbaslik">Editörler: Salih Gürbüz, Bayram Oğuz Aydın, Enderhan Karakoç</p>
+            <p class="kunye">Akademisyen Kitabevi</p>
+            <a class="kitap-baglanti" href="https://share.google/hLFPfYiAhShsJnN52" target="_blank" rel="noopener">Satın al</a>
+          </div>
+        </article>
+        <article class="kitap">
+          <img src="img/kapak-public-relations.jpg" alt="Public Relations in the Networked Publics kitap kapağı" width="362" height="520" loading="lazy">
+          <div>
+            <h3 lang="en">Public Relations in the Networked Publics</h3>
+            <p class="altbaslik">Editörler: Bayram Oğuz Aydın, Salih Gürbüz, Özlem Duğan</p>
+            <p class="kunye">Peter Lang</p>
+            <a class="kitap-baglanti" href="https://share.google/Va419XAlbfiuCXVMk" target="_blank" rel="noopener">Satın al</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="alt-baslik">Kitap bölümleri</h3>
+      <div class="bolumler">
+        <article class="bolum-kitap">
+          <img src="img/bolum-sinema-felsefesi.jpg" alt="Sinema Felsefesi kitap kapağı" width="240" height="372" loading="lazy">
+          <h4>Sinema Felsefesi</h4>
+          <p class="kunye">Nobel Akademik Yayıncılık</p>
+        </article>
+        <article class="bolum-kitap">
+          <img src="img/bolum-sinema-toplum.jpg" alt="Sinema Toplum İlişkileri Üzerine Çözümlemeler kitap kapağı" width="240" height="372" loading="lazy">
+          <h4>Sinema Toplum İlişkileri Üzerine Çözümlemeler</h4>
+          <p class="kunye">Nobel Akademik Yayıncılık</p>
+        </article>
+        <article class="bolum-kitap">
+          <img src="img/bolum-siyasal-teorik.jpg" alt="Siyasal İletişim: Teorik Tartışmalar kitap kapağı" width="240" height="372" loading="lazy">
+          <h4>Siyasal İletişim: Teorik Tartışmalar</h4>
+          <p class="kunye">Nobel Akademik Yayıncılık</p>
+        </article>
+        <article class="bolum-kitap">
+          <img src="img/bolum-siyasal-uygulamali.jpg" alt="Siyasal İletişim: Uygulamalı Tartışmalar kitap kapağı" width="240" height="372" loading="lazy">
+          <h4>Siyasal İletişim: Uygulamalı Tartışmalar</h4>
+          <p class="kunye">Nobel Akademik Yayıncılık</p>
+        </article>
+      </div>
+      <p class="tumu"><a href="https://share.google/AUjntWHSUDRYs5Wc7" target="_blank" rel="noopener">Nobel Akademik'teki tüm kitapları gör</a></p>
+    </div>
+  </section>
+
+  <section class="bolum" id="radyo">
+    <div class="kap">
+      <h2>Radyo ve YouTube</h2>
+      <p class="giris-metni">Akademideki soruları mikrofona ve ekrana taşıyan yayınlar.</p>
+      <div class="programlar">
+        <article class="program">
+          <span class="kanal">Radyo Gençlik · 2026</span>
+          <h3>Medya ve Çocuk</h3>
+          <span class="sayi">Hafta içi her gün, 16.00</span>
+        </article>
+        <article class="program">
+          <span class="kanal">Ribat FM · 2025-2026</span>
+          <h3>Repliklerle Terapi</h3>
+          <span class="sayi">68 bölüm</span>
+        </article>
+        <article class="program">
+          <span class="kanal">Ribat FM · 2025-2026</span>
+          <h3>Medya: Görünenler ve Ötesi</h3>
+          <span class="sayi">20 bölüm</span>
+        </article>
+        <article class="program">
+          <span class="kanal">Radyo Gençlik · 2021-2023</span>
+          <h3>İletişim Meselesi</h3>
+          <span class="sayi">Program dizisi</span>
+        </article>
+      </div>
+      <a class="youtube" href="https://youtube.com/@iletisimgunlugu" target="_blank" rel="noopener">
+        <img src="img/youtube-iletisim-gunlugu.jpg" alt="İletişim Günlüğü YouTube kanalı kapak görseli" width="962" height="256" loading="lazy">
+        <span class="yt-metin">
+          <span class="kanal">YouTube</span>
+          <strong>İletişim Günlüğü</strong>
+          <span>@iletisimgunlugu · Kanala git</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section class="bolum" id="yazilar">
+    <div class="kap">
+      <h2>Yazılar</h2>
+      <p class="giris-metni">Kültür ve sanat dergilerinde yayımlanan yazılar ve söyleşiler.</p>
+      <ul class="yazilar">
+        <li>
+          <a href="https://share.google/B6qhqrGQXu51xDJY7" target="_blank" rel="noopener">İletişimde Nezaket ve Konuşma Sanatının Yeri ve Önemi</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/DqaQHK5pHJyVYgvDv" target="_blank" rel="noopener">Psikolojinin Işığında İletişim: Kendini Bilmek ve Başkalarıyla Bağ Kurmak</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/Io7Dp3BWmXLroyBHK" target="_blank" rel="noopener">İletişim Kendini Bilmektir</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/imcf1nHIKYBp3oQGc" target="_blank" rel="noopener">Ramazan ve İletişim Ahlakı</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/u1z8MuJ1ijwJwLy6j" target="_blank" rel="noopener">Onaylanma Açlığından Sanal Yalnızlığa: Sosyal Medya Bağımlılığının Anatomisi</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/uLA6EwyE743SHNJW7" target="_blank" rel="noopener">Metafizik Bir İletişim Formu Olarak İnsan</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/F05h3cWEx2CHmVrcu" target="_blank" rel="noopener">Hac İbadetinde ve Umrede İletişim Etiği</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/n0LrfqTT96MISQGmV" target="_blank" rel="noopener">İletişim Cihadı: Söz, Anlam ve Modern Çağın Yeni Cephesi</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/YtLNx5gzQRBNcoLjt" target="_blank" rel="noopener">Hissetmeden Anlaşılmaz: İletişimde Empati Ahlakı</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/UaHXgbWGaSyOqrSQq" target="_blank" rel="noopener">Kibir İletişimi Nasıl Hasta Eder?</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/xPv0RtDK7RVPHW0fo" target="_blank" rel="noopener">İnsan Eşittir İletişim</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/BWOG7AgDzp9OknOey" target="_blank" rel="noopener">Takdir, Beğeni ve Gerçek Özgüvenin İletişime Etkisi</a>
+          <span class="dergi">Ribat Dergisi</span>
+        </li>
+        <li>
+          <a href="https://share.google/iJmzjSwyMseX10L53" target="_blank" rel="noopener">İletişim Dışarıda Değil, İçeride Başlar</a>
+          <span class="dergi">Gönül Dergisi · Söyleşi · Şubat 2026</span>
+        </li>
+        <li>
+          <a href="https://share.google/Bd5XzaihjHG9wsoFN" target="_blank" rel="noopener">Etkili İletişimin Dinamikleri</a>
+          <span class="dergi">Gönül Dergisi · Söyleşi · Şubat 2023</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bolum" id="yayinlar">
+    <div class="kap">
+      <h2>Yayınlar</h2>
+      <p class="giris-metni">Makaleler, hakemlik ve atıf kayıtları güncel olarak aşağıdaki profillerde.</p>
+      <div class="baglantilar">
+        <a class="baglanti" href="https://dergipark.org.tr/tr/pub/@gurbuzsalih" target="_blank" rel="noopener">
+          <strong>DergiPark</strong>
+          <span>Makaleler ve hakemlik</span>
+        </a>
+        <a class="baglanti" href="https://orcid.org/0000-0002-5690-8136" target="_blank" rel="noopener">
+          <strong>ORCID</strong>
+          <span>0000-0002-5690-8136</span>
+        </a>
+        <a class="baglanti" href="https://share.google/tZuXiEWoLOkRbGDMM" target="_blank" rel="noopener">
+          <strong>Academia.edu</strong>
+          <span>Makale ve bildiri metinleri</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bolum" id="iletisim">
+    <div class="kap">
+      <h2>İletişim</h2>
+      <div class="iletisim-satir">
+        <div>
+          <span class="etiket">E-posta</span>
+          <a href="mailto:sgurbuz@erbakan.edu.tr">sgurbuz@erbakan.edu.tr</a>
+        </div>
+        <div>
+          <span class="etiket">Kurum</span>
+          Necmettin Erbakan Üniversitesi<br>Güzel Sanatlar ve Mimarlık Fakültesi, Konya
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="kap">
+    <span>© 2026 Salih Gürbüz</span>
+    <span class="nun" aria-hidden="true">ن</span>
+  </div>
+</footer>
+
+</body>
+</html>
