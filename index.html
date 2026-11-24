@@ -17,6 +17,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="tr_TR">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="tr" href="http://salihgurbuz.com/">
+<link rel="alternate" hreflang="en" href="http://salihgurbuz.com/en/">
+<link rel="alternate" hreflang="x-default" href="http://salihgurbuz.com/">
+<script>try{var k=sessionStorage.getItem('kaydir');if(k){document.documentElement.classList.add('gel-'+k);sessionStorage.removeItem('kaydir');}}catch(e){}</script>
 <title>Doç. Dr. Salih Gürbüz</title>
 <meta name="description" content="Doç. Dr. Salih Gürbüz: akademisyen, radyocu ve gazeteci. Necmettin Erbakan Üniversitesi Radyo, Televizyon ve Sinema Bölümü. İletişim, medya çalışmaları, radyo ve kitaplar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,6 +142,29 @@ body.ses-acik .ses-yuzen{display:none}
 .gunluk-baska:hover{text-decoration:underline}
 @media (max-width:640px){.gunluk{padding:44px 0 4px}.gunluk-kart{padding:40px 24px 26px;box-shadow:8px 8px 0 var(--lacivert)}.gunluk-kart::before{font-size:5.5rem;left:14px;top:-14px}}
 
+
+
+/* Dil anahtarı ve kaydırma geçişi */
+@media (min-width:1181px) and (max-width:1440px){header.ust .sosyal{display:none}}
+@media (min-width:1441px){header.ust .kap{max-width:1440px}}
+.dil{position:relative;display:inline-flex;align-items:center;height:36px;padding:0 4px;border-radius:999px;background:var(--kagit);border:1px solid var(--cizgi);text-decoration:none;font:600 .82rem var(--f-govde);letter-spacing:.06em;color:var(--soluk)}
+.dil span{position:relative;z-index:1;width:34px;text-align:center;transition:color .3s}
+.dil-top{position:absolute;top:3px;left:4px;width:34px;height:28px;border-radius:999px;background:var(--lacivert);transition:transform .35s cubic-bezier(.6,.05,.3,1)}
+html[lang=tr] .dil-tr,html[lang=en] .dil-en{color:#fff}
+html[lang=en] .dil-top{transform:translateX(34px)}
+.dil.gecis .dil-top{transform:translateX(34px)}html[lang=en] .dil.gecis .dil-top{transform:none}
+.dil.gecis .dil-tr{color:var(--soluk)}.dil.gecis .dil-en{color:#fff}html[lang=en] .dil.gecis .dil-tr{color:#fff}html[lang=en] .dil.gecis .dil-en{color:var(--soluk)}
+.dil:hover{border-color:var(--gul)}
+html.gel-sag body{animation:gelSag .5s cubic-bezier(.2,.7,.2,1) both}
+html.gel-sol body{animation:gelSol .5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes gelSag{from{transform:translateX(35%);opacity:0}to{transform:none;opacity:1}}
+@keyframes gelSol{from{transform:translateX(-35%);opacity:0}to{transform:none;opacity:1}}
+body.git-sol,body.git-sag{transition:transform .38s cubic-bezier(.6,.05,.4,1),opacity .38s;opacity:0}
+body.git-sol{transform:translateX(-35%)}body.git-sag{transform:translateX(35%)}
+.kaydir-ipucu{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;z-index:60;background:var(--lacivert);color:#fff;border-radius:999px;padding:10px 18px;font:600 .9rem var(--f-govde);box-shadow:0 10px 26px rgba(0,0,0,.25);transition:all .4s;pointer-events:none;white-space:nowrap}
+.kaydir-ipucu.gor{opacity:1;transform:translate(-50%,0)}
+@media (max-width:560px){.dil{height:34px;padding:0}.dil span{width:34px}.dil-top{display:none}html[lang=tr] .dil-tr,html[lang=en] .dil-en{display:none}html[lang=tr] .dil-en,html[lang=en] .dil-tr{color:var(--lacivert)}}
+@media (prefers-reduced-motion:reduce){html.gel-sag body,html.gel-sol body{animation:none}body.git-sol,body.git-sag{transform:none}}
 
 /* Giriş */
 .giris{padding:56px 0 48px}
@@ -264,6 +291,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </ul>
     </nav>
     <button type="button" class="ust-dinle dinle-ac"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sesimi dinleyin</span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></button>
+    <a class="dil" href="en/" hreflang="en" lang="en" aria-label="English version" title="English"><span class="dil-tr">TR</span><span class="dil-en">EN</span><i class="dil-top" aria-hidden="true"></i></a>
     <div class="sosyal">
       <a href="https://www.youtube.com/@iletisimgunlugu" target="_blank" rel="noopener" aria-label="YouTube: İletişim Günlüğü" title="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg></a>
       <a href="https://www.instagram.com/dr.salihgurbuz/" target="_blank" rel="noopener" aria-label="Instagram: dr.salihgurbuz" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
@@ -670,6 +698,32 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   document.getElementById('gunlukBaska').addEventListener('click',function(){
     i=(i+1)%S.length; soz.style.opacity=0; setTimeout(function(){goster(i);soz.style.opacity=1;},300);
   });
+})();
+(function(){
+  var a=document.querySelector('.dil'); if(!a)return;
+  var en=document.documentElement.lang==='en', yon=en?'sol':'sag';
+  function gec(){
+    if(document.body.classList.contains('git-sol')||document.body.classList.contains('git-sag'))return;
+    a.classList.add('gecis');
+    try{sessionStorage.setItem('kaydir',yon);}catch(e){}
+    document.body.classList.add(en?'git-sag':'git-sol');
+    setTimeout(function(){location.href=a.href;},360);
+  }
+  a.addEventListener('click',function(e){if(e.metaKey||e.ctrlKey)return;e.preventDefault();gec();});
+  var x0=null,y0=null,t0=0,engel='nav,.oynatici,iframe,.ses-panel,.hero-alanlar,input,textarea';
+  document.addEventListener('touchstart',function(e){if(e.touches.length!==1||e.target.closest(engel)){x0=null;return;}x0=e.touches[0].clientX;y0=e.touches[0].clientY;t0=Date.now();},{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(x0===null)return; var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0; x0=null;
+    if(Math.abs(dx)<90||Math.abs(dx)<2.2*Math.abs(dy)||Date.now()-t0>700)return;
+    if((!en&&dx<0)||(en&&dx>0))gec();
+  },{passive:true});
+  try{
+    if(window.matchMedia('(pointer:coarse)').matches&&!localStorage.getItem('kaydirIpucu')){
+      var d=document.createElement('div');d.className='kaydir-ipucu';d.textContent=en?'Swipe right for Türkçe →':'← Sola kaydırın: English';
+      document.body.appendChild(d);setTimeout(function(){d.classList.add('gor');},1400);setTimeout(function(){d.classList.remove('gor');},5200);
+      localStorage.setItem('kaydirIpucu','1');
+    }
+  }catch(e){}
 })();
 </script>
 </body>
