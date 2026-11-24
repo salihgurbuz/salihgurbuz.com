@@ -139,34 +139,6 @@ body.ses-acik .ses-yuzen{display:none}
 @media (max-width:640px){.gunluk{padding:44px 0 4px}.gunluk-kart{padding:40px 24px 26px;box-shadow:8px 8px 0 var(--lacivert)}.gunluk-kart::before{font-size:5.5rem;left:14px;top:-14px}}
 
 
-/* Mr. AIGürbüz */
-.hoca{padding:64px 0 10px}
-.hoca-kutu{position:relative;overflow:hidden;background:var(--lacivert);color:var(--kagit);border-radius:10px;padding:44px 48px 40px}
-.hoca-kutu::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;border:38px solid rgba(181,71,94,.22);pointer-events:none}
-.hoca-ust{display:flex;align-items:center;gap:18px;margin-bottom:10px;position:relative;z-index:1}
-.hoca-rozet{flex:none;width:64px;height:64px;border-radius:18px;background:var(--gul);display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25);transform:rotate(-6deg)}
-.hoca-ad{margin:0;font-family:var(--f-govde);font-weight:800;font-style:italic;font-size:clamp(1.9rem,4vw,2.7rem);line-height:1;letter-spacing:-.02em;color:#fff}
-.hoca-ad b{color:#f3b8c4;font-weight:800}
-.hoca-slogan{margin:6px 0 0;font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#f3b8c4}
-.hoca-aciklama{position:relative;z-index:1;margin:8px 0 22px;color:#d9d2c3;max-width:60ch}
-.hoca-form{position:relative;z-index:1;display:flex;gap:10px;background:var(--kagit);border-radius:999px;padding:6px 6px 6px 22px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-.hoca-form input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:1.05rem;color:var(--metin);outline:none}
-.hoca-form button{flex:none;border:0;border-radius:999px;background:var(--gul);color:#fff;font:600 1rem var(--f-govde);padding:12px 22px;cursor:pointer;display:flex;align-items:center;gap:8px}
-.hoca-form button:hover{filter:brightness(1.08)}
-.hoca-oneriler{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
-.hoca-oneriler button{border:1px solid rgba(255,253,248,.35);background:transparent;color:var(--kagit);border-radius:999px;padding:6px 14px;font:inherit;font-size:.9rem;cursor:pointer}
-.hoca-oneriler button:hover{background:rgba(255,255,255,.1)}
-.hoca-cevap{position:relative;z-index:1;margin-top:26px}
-.hoca-cevap:empty{display:none}
-.hoca-giris{margin:0 0 12px;color:#f3b8c4;font-weight:600}
-.hoca-parca{background:var(--kagit);color:var(--metin);border-radius:8px;padding:20px 22px;margin:0 0 12px;border-left:5px solid var(--gul)}
-.hoca-parca p{margin:0;line-height:1.65}
-.hoca-parca mark{background:#f6dbe1;color:inherit;padding:0 2px;border-radius:2px}
-.hoca-kaynak{display:block;margin-top:10px;font-size:.85rem;color:var(--soluk)}
-.hoca-kaynak i{color:var(--lacivert)}
-.hoca-not{position:relative;z-index:1;margin:20px 0 0;font-size:.82rem;color:#b9b2a5}
-@media (max-width:640px){.hoca-kutu{padding:32px 20px 28px}.hoca-rozet{width:52px;height:52px;border-radius:14px}.hoca-form{padding-left:16px}.hoca-form button span{display:none}.hoca-form button{padding:12px 16px}}
-
 /* Giriş */
 .giris{padding:56px 0 48px}
 .giris .kap{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:64px;align-items:center}
@@ -354,31 +326,6 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <blockquote class="gunluk-soz" id="gunlukSoz">Her yolculuk bir soruyla başlar.</blockquote>
         <figcaption class="gunluk-kaynak"><span><a href="#kitaplar"><i>İletişimin Psikolojisi: Benlik, İlişkiler ve Toplumsal Bağlam</i></a> (2025) · <span id="gunlukBolum">Önsöz</span></span><button type="button" class="gunluk-baska" id="gunlukBaska">Bir cümle daha ›</button></figcaption>
       </figure>
-    </div>
-  </section>
-
-  <section class="hoca" id="hoca" aria-labelledby="hoca-baslik">
-    <div class="kap">
-      <div class="hoca-kutu">
-        <div class="hoca-ust">
-          <span class="hoca-rozet"><svg viewBox="0 0 40 40" width="38" height="38" aria-hidden="true"><path d="M8 7h24a5 5 0 0 1 5 5v13a5 5 0 0 1-5 5H18l-8 7v-7H8a5 5 0 0 1-5-5V12a5 5 0 0 1 5-5z" fill="#fff"/><text x="20" y="24.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-style="italic" font-size="13" fill="#b5475e">AI</text></svg></span>
-          <div><h2 class="hoca-ad" id="hoca-baslik">Mr. <b>AI</b>Gürbüz</h2><p class="hoca-slogan">Sor, kitaplardan cevap gelsin</p></div>
-        </div>
-        <p class="hoca-aciklama">İletişim, empati, çocuklarla konuşmak, medya okuryazarlığı... Aklınızdaki soruyu yazın; Mr. AIGürbüz, Salih Gürbüz'ün kitaplarında sorunuza en yakın bölümleri bulup getirsin.</p>
-        <form class="hoca-form" id="hocaForm" role="search">
-          <input id="hocaSoru" type="search" placeholder="Sorunuzu yazın..." aria-label="Mr. AIGürbüz'e sorunuz" autocomplete="off" maxlength="200">
-          <button type="submit"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg><span>Sor</span></button>
-        </form>
-        <div class="hoca-oneriler" id="hocaOneriler">
-          <button type="button">Empati nasıl kurulur?</button>
-          <button type="button">Çocuğumla nasıl konuşmalıyım?</button>
-          <button type="button">Medya okuryazarlığı nedir?</button>
-          <button type="button">Ben dili nedir?</button>
-          <button type="button">Komşuluk ilişkileri nasıl canlanır?</button>
-        </div>
-        <div class="hoca-cevap" id="hocaCevap" aria-live="polite"></div>
-        <p class="hoca-not">Mr. AIGürbüz şimdilik kitaplarda arama yaparak yanıt verir; gösterilen metinler kitaplardan olduğu gibi alınmıştır. Sohbet eden sürümü yolda.</p>
-      </div>
     </div>
   </section>
 
@@ -723,58 +670,6 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   document.getElementById('gunlukBaska').addEventListener('click',function(){
     i=(i+1)%S.length; soz.style.opacity=0; setTimeout(function(){goster(i);soz.style.opacity=1;},300);
   });
-})();
-(function(){
-  var KITAPLAR=['veri/iletisimin-psikolojisi.json'];
-  var DUR=('acaba ama ancak ve veya ile ya da de da ki mi mı mu mü mısın misin nasıl ne neden niçin nedir niye hangi kim kime için gibi bir bu şu o çok daha en her hiç olan olarak olur olmak olmalı olmalıyım yapmak yapmalı yapmalıyım etmek etmeli edilir nasil var yok ben sen biz siz onlar benim bana beni sizin size kadar sonra önce göre diye ise iken yani hem hep gerek gerekir lazım nelerdir neler nerede zaman').split(' ');
-  var dur={};DUR.forEach(function(w){dur[w]=1;});
-  function kelimeler(t){return t.toLocaleLowerCase('tr').replace(/[^a-zçğıöşüâîû0-9\s]/g,' ').split(/\s+/).filter(function(w){return w.length>1&&!dur[w];});}
-  function kok(w){return w.length>5?w.slice(0,5):w;}
-  var veri=null,yukleniyor=null;
-  function yukle(){
-    if(veri)return Promise.resolve(veri);
-    if(yukleniyor)return yukleniyor;
-    yukleniyor=Promise.all(KITAPLAR.map(function(u){return fetch(u).then(function(r){return r.json();});})).then(function(ks){
-      var P=[],df={};
-      ks.forEach(function(k){k.parcalar.forEach(function(p){
-        var tf={},n=0;kelimeler(p.t).forEach(function(w){var s=kok(w);tf[s]=(tf[s]||0)+1;n++;});
-        Object.keys(tf).forEach(function(s){df[s]=(df[s]||0)+1;});
-        P.push({k:k.kitap,y:k.yil,b:p.b,t:p.t,tf:tf,n:n});
-      });});
-      var ort=P.reduce(function(a,p){return a+p.n;},0)/P.length;
-      veri={P:P,df:df,ort:ort};return veri;
-    });
-    return yukleniyor;
-  }
-  function ara(soru,v){
-    var q=kelimeler(soru).map(kok).filter(function(s,i,a){return a.indexOf(s)===i;}),N=v.P.length;
-    if(!q.length)return {q:q,s:[]};
-    var s=v.P.map(function(p){
-      var sk=0,es=0;q.forEach(function(t){var f=p.tf[t];if(!f)return;es++;
-        var idf=Math.log(1+(N-v.df[t]+.5)/(v.df[t]+.5));sk+=idf*f*2.2/(f+1.2*(.25+.75*p.n/v.ort));});
-      return {p:p,sk:sk*(1+.5*(es-1)/Math.max(1,q.length-1||1))};
-    }).filter(function(x){return x.sk>0;}).sort(function(a,b){return b.sk-a.sk;});
-    var esik=s.length?s[0].sk*.45:0;
-    return {q:q,s:s.filter(function(x){return x.sk>=esik;}).slice(0,3)};
-  }
-  function kacir(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-  function vurgula(t,q){
-    return kacir(t).replace(/[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû]+/g,function(w){var l=w.toLocaleLowerCase('tr');return (!dur[l]&&l.length>1&&q.indexOf(kok(l))>-1)?'<mark>'+w+'</mark>':w;});
-  }
-  var form=document.getElementById('hocaForm'),inp=document.getElementById('hocaSoru'),out=document.getElementById('hocaCevap');
-  function sor(soru){
-    soru=soru.trim(); if(!soru)return;
-    out.innerHTML='<p class="hoca-giris">Mr. AIGürbüz kitapları karıştırıyor...</p>';
-    yukle().then(function(v){
-      var r=ara(soru,v);
-      if(!r.s.length){out.innerHTML='<p class="hoca-giris">Bu soruya kitaplarda doğrudan bir karşılık bulamadım. Soruyu başka kelimelerle sormayı deneyin; örneğin <i>empati</i>, <i>beden dili</i>, <i>aile içi iletişim</i> ya da <i>sosyal medya</i>.</p>';return;}
-      out.innerHTML='<p class="hoca-giris">“'+kacir(soru)+'” sorusuna kitaplarda en yakın bölümler:</p>'+r.s.map(function(x){
-        return '<article class="hoca-parca"><p>'+vurgula(x.p.t,r.q)+'</p><span class="hoca-kaynak"><i>'+kacir(x.p.k)+'</i> ('+x.p.y+') · '+kacir(x.p.b)+'</span></article>';}).join('');
-    }).catch(function(){out.innerHTML='<p class="hoca-giris">Kitaplara şu an ulaşılamadı. Biraz sonra yeniden deneyin.</p>';});
-  }
-  form.addEventListener('submit',function(e){e.preventDefault();sor(inp.value);});
-  inp.addEventListener('focus',function(){yukle();},{once:true});
-  document.querySelectorAll('#hocaOneriler button').forEach(function(b){b.addEventListener('click',function(){inp.value=b.textContent;sor(b.textContent);});});
 })();
 </script>
 </body>
