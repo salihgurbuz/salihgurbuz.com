@@ -339,7 +339,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="kap">
       <div class="portre-kutu">
         <img class="portre" src="img/portre.jpg" alt="Doç. Dr. Salih Gürbüz" width="614" height="800">
-        <button type="button" class="portre-dinle dinle-ac" aria-label="Sesimi dinleyin">
+        <button type="button" class="portre-dinle dinle-ac" data-liste="portre" aria-label="Sesimi dinleyin">
           <span class="halka" aria-hidden="true"></span><span class="halka h2" aria-hidden="true"></span>
           <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
@@ -767,6 +767,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   var panel=document.getElementById('sesPanel'), ekran=panel.querySelector('.ses-ekran'), baslik=panel.querySelector('.ses-baslik'), simdiki=null;
   var listeler={
     gunluk:{src:'https://www.youtube-nocookie.com/embed/videoseries?list=PLpmNT3Atl_fx6WvcMI9XJkXj-Gzmn7KCg&autoplay=1',ad:'İletişim Günlüğü'},
+    portre:{src:'https://www.youtube-nocookie.com/embed/XH95aCNpd9M?autoplay=1',ad:'Dinleyin'},
     notlar:{src:'https://www.youtube-nocookie.com/embed/zifoBXkMUyw?list=PLAXZoJlG6JcE&autoplay=1',ad:'Kısa Kısa İletişim Notları'}
   };
   function ac(e){
