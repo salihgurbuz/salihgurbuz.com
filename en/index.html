@@ -166,6 +166,29 @@ body.git-sol{transform:translateX(-35%)}body.git-sag{transform:translateX(35%)}
 @media (max-width:560px){.dil{height:34px;padding:0}.dil span{width:34px}.dil-top{display:none}html[lang=tr] .dil-tr,html[lang=en] .dil-en{display:none}html[lang=tr] .dil-en,html[lang=en] .dil-tr{color:var(--lacivert)}}
 @media (prefers-reduced-motion:reduce){html.gel-sag body,html.gel-sol body{animation:none}body.git-sol,body.git-sag{transform:none}}
 
+
+/* Radyo arşivi: Medya Görünenler ve Ötesi */
+.arsiv{margin:26px 0 28px;background:var(--lacivert);color:var(--kagit);border-radius:10px;padding:28px 30px 24px;position:relative;overflow:hidden}
+.arsiv::after{content:"";position:absolute;right:-70px;bottom:-70px;width:220px;height:220px;border-radius:50%;border:30px solid rgba(181,71,94,.2);pointer-events:none}
+.arsiv-ust{display:flex;align-items:center;gap:16px;flex-wrap:wrap;position:relative;z-index:1}
+.arsiv-ikon{flex:none;width:52px;height:52px;border-radius:50%;background:var(--gul);display:grid;place-items:center;color:#fff}
+.arsiv-ust h3{margin:0;font-family:var(--f-baslik);font-weight:600;font-size:1.45rem;color:#fff}
+.arsiv-ust p{margin:2px 0 0;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#f3b8c4}
+.arsiv-oynatici{position:relative;z-index:1;margin:18px 0 16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:12px 14px}
+.arsiv-simdi{margin:0 0 8px;font-size:.92rem;color:#d9d2c3}
+.arsiv-simdi b{color:#fff}
+.arsiv-ekran{height:0;overflow:hidden;border-radius:6px;transition:height .3s}
+.arsiv-ekran.acik{height:110px}
+.arsiv-ekran iframe{width:100%;height:110px;border:0;display:block;background:#111}
+.arsiv-liste{position:relative;z-index:1;list-style:none;margin:0;padding:0 4px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;max-height:236px;overflow-y:auto}
+.arsiv-liste button{width:100%;text-align:left;background:transparent;border:1px solid rgba(255,253,248,.28);border-radius:8px;color:var(--kagit);padding:9px 12px;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:1px}
+.arsiv-liste button b{font-weight:600}
+.arsiv-liste button span{font-size:.82rem;color:#c9c2b4}
+.arsiv-liste button:hover{border-color:#f3b8c4}
+.arsiv-liste button.etkin{background:var(--gul);border-color:var(--gul)}
+.arsiv-liste button.etkin span{color:#fde9ee}
+@media (max-width:640px){.arsiv{padding:22px 18px 18px}.arsiv-liste{grid-template-columns:1fr 1fr}}
+
 /* Giriş */
 .giris{padding:56px 0 48px}
 .giris .kap{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:64px;align-items:center}
@@ -375,13 +398,48 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <article class="program">
           <span class="kanal">Ribat FM · 2025-2026</span>
           <h3>Medya: Görünenler ve Ötesi</h3>
-          <span class="sayi"><i>Media: The Visible and Beyond</i> · 20 episodes</span>
+          <span class="sayi"><i>Media: The Visible and Beyond</i> · 22 episodes · <a href="#medya-arsiv">Listen</a></span>
         </article>
         <article class="program">
           <span class="kanal">Radyo Gençlik · 2021-2023</span>
           <h3>İletişim Meselesi</h3>
           <span class="sayi"><i>The Matter of Communication</i> · Programme series</span>
         </article>
+      </div>
+      <div class="arsiv" id="medya-arsiv">
+        <div class="arsiv-ust">
+          <span class="arsiv-ikon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 10a8 8 0 0 1 16 0v6a2 2 0 0 1-2 2h-1v-7h3M4 11h3v7H6a2 2 0 0 1-2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div><h3>Medya: Görünenler ve Ötesi</h3><p>Ribat FM · All episodes (in Turkish)</p></div>
+        </div>
+        <div class="arsiv-oynatici">
+          <p class="arsiv-simdi" id="arsivSimdi">Tap an episode to listen.</p>
+          <div class="arsiv-ekran" id="arsivEkran"></div>
+        </div>
+        <ul class="arsiv-liste" id="arsivListe">
+<li><button type="button" data-id="1pmpmluA22ZH8V1rUSWNlWkNj0Y5T5QgK"><b>Episode 22</b><span>October 21, 2026</span></button></li>
+<li><button type="button" data-id="1LkEV3Q_MY-J4eKApKi23V1MGIn5voRqN"><b>Episode 21</b><span>October 14, 2026</span></button></li>
+<li><button type="button" data-id="17WIXia2Z-y1ReGpWKN9yDAtA6w4qatbl"><b>Episode 20</b><span>October 7, 2026</span></button></li>
+<li><button type="button" data-id="1QBX-ZQQnQlk6GkTf_5INXdlBs-bytnsi"><b>Episode 19</b><span>September 30, 2026</span></button></li>
+<li><button type="button" data-id="1iuLK0m8iTAHWf_7bEPCorokeQasSmQ8T"><b>Episode 18</b><span>September 23, 2026</span></button></li>
+<li><button type="button" data-id="1I5Vp5fxiQhJV2CGW8Tm04wB6_0qvMdtt"><b>Episode 17</b><span>August 26, 2026</span></button></li>
+<li><button type="button" data-id="1RbZql5mlByOEsC5DROoavXwf_6HyxxrW"><b>Episode 16</b><span>August 19, 2026</span></button></li>
+<li><button type="button" data-id="164ohKy8fGJeyLPcBBZ-h4oX366kHSYz0"><b>Episode 15</b><span>July 22, 2026</span></button></li>
+<li><button type="button" data-id="18oNUlAXNOiMepssceXR136hBtYnuNmlH"><b>Episode 14</b><span>July 15, 2026</span></button></li>
+<li><button type="button" data-id="1XKOcp093xWOdaP3xApmsvrzE9p3FwX0X"><b>Episode 13</b><span>July 8, 2026</span></button></li>
+<li><button type="button" data-id="1sGqSd0XkQytLZb8VJK2zwrv9qEu1QaFf"><b>Episode 12</b><span>June 24, 2026</span></button></li>
+<li><button type="button" data-id="17mzBKCacrKfGHplCsmADxypOYf12XY-O"><b>Episode 11</b><span>June 17, 2026</span></button></li>
+<li><button type="button" data-id="1mxPQUf3-iB6mTZcdAsgfQxO3CZboJVSt"><b>Episode 10</b><span>June 3, 2026</span></button></li>
+<li><button type="button" data-id="1CWKky8Fw9ur5kz2K5oWYMKNvH9MWa4mJ"><b>Episode 9</b><span>May 20, 2026</span></button></li>
+<li><button type="button" data-id="15nbZcF2TdqBQUDPVc1_z_TkefjwPdTpA"><b>Episode 8</b><span>May 13, 2026</span></button></li>
+<li><button type="button" data-id="11yfhgESEq4AQOttebfygvmchN4IP3_Hd"><b>Episode 7</b><span>May 6, 2026</span></button></li>
+<li><button type="button" data-id="1l-v6D4jSy2C634KLDALs2Tb3kzN4ataZ"><b>Episode 6 · part 1</b><span>April 29, 2026</span></button></li>
+<li><button type="button" data-id="1dTvGgUWA1UONIsrrTPOiwl1nk0z4NhyK"><b>Episode 6 · part 2</b><span>April 29, 2026</span></button></li>
+<li><button type="button" data-id="1VEP5dWlm485dXLADRVLdf7B0CBReEj6s"><b>Episode 5</b><span>April 15, 2026</span></button></li>
+<li><button type="button" data-id="1Dj4l5zognCduOZ5MdDANDtHVggK0tFpP"><b>Episode 4</b><span>April 8, 2026</span></button></li>
+<li><button type="button" data-id="1cAbc-h4-lTfLWSB-_uLEJ2ghFAhHquFo"><b>Episode 3</b><span>April 1, 2026</span></button></li>
+<li><button type="button" data-id="1GkUy4n_eno110jPI0qsif8KN7DujO_qJ"><b>Episode 2</b><span>March 18, 2026</span></button></li>
+<li><button type="button" data-id="1Uho84smopnEMnYLxlJWptC4oA-KVnp5z"><b>Episode 1</b><span>March 11, 2026</span></button></li>
+        </ul>
       </div>
       <a class="youtube" href="https://youtube.com/@iletisimgunlugu" target="_blank" rel="noopener">
         <img src="../img/youtube-iletisim-gunlugu.jpg" alt="Banner of the İletişim Günlüğü YouTube channel" width="962" height="256" loading="lazy">
@@ -729,6 +787,18 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       localStorage.setItem('kaydirIpucu','1');
     }
   }catch(e){}
+})();
+(function(){
+  var ekran=document.getElementById('arsivEkran'),simdi=document.getElementById('arsivSimdi'),liste=document.getElementById('arsivListe');
+  if(!liste)return; var etkin=null;
+  liste.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b||b===etkin)return;
+    if(etkin)etkin.classList.remove('etkin'); b.classList.add('etkin'); etkin=b;
+    ekran.innerHTML='<iframe src="https://drive.google.com/file/d/'+b.dataset.id+'/preview" allow="autoplay" title="'+b.querySelector('b').textContent+'"></iframe>';
+    ekran.classList.add('acik');
+    simdi.innerHTML='<b>'+b.querySelector('b').textContent+'</b> · '+b.querySelector('span').textContent;
+  });
+  ekran.addEventListener('contextmenu',function(e){e.preventDefault();});
 })();
 </script>
 </body>
