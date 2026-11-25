@@ -174,6 +174,18 @@ body.git-sol{transform:translateX(-35%)}body.git-sag{transform:translateX(35%)}
 .arsiv-ikon{flex:none;width:52px;height:52px;border-radius:50%;background:var(--gul);display:grid;place-items:center;color:#fff}
 .arsiv-ust h3{margin:0;font-family:var(--f-baslik);font-weight:600;font-size:1.45rem;color:#fff}
 .arsiv-ust p{margin:2px 0 0;font-size:.85rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#f3b8c4}
+.arsiv-sekmeler{position:relative;z-index:1;display:flex;gap:8px;margin:18px 0 0;flex-wrap:wrap}
+.arsiv-sekme{flex:1 1 220px;text-align:left;background:transparent;border:1px solid rgba(255,253,248,.3);border-radius:8px;color:var(--kagit);padding:10px 14px;font:inherit;cursor:pointer;display:flex;flex-direction:column}
+.arsiv-sekme b{font-family:var(--f-baslik);font-weight:600;font-size:1.05rem}
+.arsiv-sekme span{font-size:.82rem;color:#c9c2b4}
+.arsiv-sekme.etkin{background:var(--kagit);color:var(--lacivert);border-color:var(--kagit)}
+.arsiv-sekme.etkin span{color:var(--soluk)}
+.arsiv-kontrol{display:flex;align-items:center;gap:10px;margin:0 0 8px}
+.arsiv-kontrol .arsiv-simdi{flex:1;margin:0}
+.arsiv-git{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,253,248,.35);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer}
+.arsiv-git:hover{background:var(--gul);border-color:var(--gul)}
+.arsiv-git:disabled{opacity:.3;cursor:default;background:transparent;border-color:rgba(255,253,248,.35)}
+.arsiv-liste[hidden]{display:none}
 .arsiv-oynatici{position:relative;z-index:1;margin:18px 0 16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:12px 14px}
 .arsiv-simdi{margin:0 0 8px;font-size:.92rem;color:#d9d2c3}
 .arsiv-simdi b{color:#fff}
@@ -388,7 +400,7 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <article class="program">
           <span class="kanal">Radyo Gençlik · 2026</span>
           <h3>Medya ve Çocuk</h3>
-          <span class="sayi">Hafta içi her gün, 16.00</span>
+          <span class="sayi">Hafta içi her gün, 16.00 · <a href="#medya-cocuk-arsiv">Dinle</a></span>
         </article>
         <article class="program">
           <span class="kanal">Ribat FM · 2025-2026</span>
@@ -406,39 +418,62 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           <span class="sayi">Program dizisi</span>
         </article>
       </div>
-      <div class="arsiv" id="medya-arsiv">
+      <div class="arsiv" id="radyo-arsiv">
         <div class="arsiv-ust">
           <span class="arsiv-ikon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 10a8 8 0 0 1 16 0v6a2 2 0 0 1-2 2h-1v-7h3M4 11h3v7H6a2 2 0 0 1-2-2v-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          <div><h3>Medya: Görünenler ve Ötesi</h3><p>Ribat FM · Bütün bölümler</p></div>
+          <div><h3>Radyo arşivi</h3><p>Bütün bölümler, tek yerde</p></div>
+        </div>
+        <div class="arsiv-sekmeler" role="tablist">
+          <button type="button" role="tab" class="arsiv-sekme etkin" data-liste="mc" id="medya-cocuk-arsiv"><b>Medya ve Çocuk</b><span>Radyo Gençlik · 13 bölüm</span></button>
+          <button type="button" role="tab" class="arsiv-sekme" data-liste="mgo" id="medya-arsiv"><b>Medya: Görünenler ve Ötesi</b><span>Ribat FM · 23 kayıt</span></button>
         </div>
         <div class="arsiv-oynatici">
-          <p class="arsiv-simdi" id="arsivSimdi">Dinlemek istediğiniz bölüme dokunun.</p>
+          <div class="arsiv-kontrol">
+            <button type="button" class="arsiv-git" id="arsivOnceki" aria-label="Listede önceki"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="arsiv-simdi" id="arsivSimdi">Dinlemek istediğiniz bölüme dokunun.</p>
+            <button type="button" class="arsiv-git" id="arsivSonraki" aria-label="Listede sonraki"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
           <div class="arsiv-ekran" id="arsivEkran"></div>
         </div>
-        <ul class="arsiv-liste" id="arsivListe">
-<li><button type="button" data-id="1pmpmluA22ZH8V1rUSWNlWkNj0Y5T5QgK"><b>22. bölüm</b><span>21 Ekim 2026</span></button></li>
-<li><button type="button" data-id="1LkEV3Q_MY-J4eKApKi23V1MGIn5voRqN"><b>21. bölüm</b><span>14 Ekim 2026</span></button></li>
-<li><button type="button" data-id="17WIXia2Z-y1ReGpWKN9yDAtA6w4qatbl"><b>20. bölüm</b><span>7 Ekim 2026</span></button></li>
-<li><button type="button" data-id="1QBX-ZQQnQlk6GkTf_5INXdlBs-bytnsi"><b>19. bölüm</b><span>30 Eylül 2026</span></button></li>
-<li><button type="button" data-id="1iuLK0m8iTAHWf_7bEPCorokeQasSmQ8T"><b>18. bölüm</b><span>23 Eylül 2026</span></button></li>
-<li><button type="button" data-id="1I5Vp5fxiQhJV2CGW8Tm04wB6_0qvMdtt"><b>17. bölüm</b><span>26 Ağustos 2026</span></button></li>
-<li><button type="button" data-id="1RbZql5mlByOEsC5DROoavXwf_6HyxxrW"><b>16. bölüm</b><span>19 Ağustos 2026</span></button></li>
-<li><button type="button" data-id="164ohKy8fGJeyLPcBBZ-h4oX366kHSYz0"><b>15. bölüm</b><span>22 Temmuz 2026</span></button></li>
-<li><button type="button" data-id="18oNUlAXNOiMepssceXR136hBtYnuNmlH"><b>14. bölüm</b><span>15 Temmuz 2026</span></button></li>
-<li><button type="button" data-id="1XKOcp093xWOdaP3xApmsvrzE9p3FwX0X"><b>13. bölüm</b><span>8 Temmuz 2026</span></button></li>
-<li><button type="button" data-id="1sGqSd0XkQytLZb8VJK2zwrv9qEu1QaFf"><b>12. bölüm</b><span>24 Haziran 2026</span></button></li>
-<li><button type="button" data-id="17mzBKCacrKfGHplCsmADxypOYf12XY-O"><b>11. bölüm</b><span>17 Haziran 2026</span></button></li>
-<li><button type="button" data-id="1mxPQUf3-iB6mTZcdAsgfQxO3CZboJVSt"><b>10. bölüm</b><span>3 Haziran 2026</span></button></li>
-<li><button type="button" data-id="1CWKky8Fw9ur5kz2K5oWYMKNvH9MWa4mJ"><b>9. bölüm</b><span>20 Mayıs 2026</span></button></li>
-<li><button type="button" data-id="15nbZcF2TdqBQUDPVc1_z_TkefjwPdTpA"><b>8. bölüm</b><span>13 Mayıs 2026</span></button></li>
-<li><button type="button" data-id="11yfhgESEq4AQOttebfygvmchN4IP3_Hd"><b>7. bölüm</b><span>6 Mayıs 2026</span></button></li>
-<li><button type="button" data-id="1l-v6D4jSy2C634KLDALs2Tb3kzN4ataZ"><b>6. bölüm · 1. kısım</b><span>29 Nisan 2026</span></button></li>
-<li><button type="button" data-id="1dTvGgUWA1UONIsrrTPOiwl1nk0z4NhyK"><b>6. bölüm · 2. kısım</b><span>29 Nisan 2026</span></button></li>
-<li><button type="button" data-id="1VEP5dWlm485dXLADRVLdf7B0CBReEj6s"><b>5. bölüm</b><span>15 Nisan 2026</span></button></li>
-<li><button type="button" data-id="1Dj4l5zognCduOZ5MdDANDtHVggK0tFpP"><b>4. bölüm</b><span>8 Nisan 2026</span></button></li>
-<li><button type="button" data-id="1cAbc-h4-lTfLWSB-_uLEJ2ghFAhHquFo"><b>3. bölüm</b><span>1 Nisan 2026</span></button></li>
-<li><button type="button" data-id="1GkUy4n_eno110jPI0qsif8KN7DujO_qJ"><b>2. bölüm</b><span>18 Mart 2026</span></button></li>
-<li><button type="button" data-id="1Uho84smopnEMnYLxlJWptC4oA-KVnp5z"><b>1. bölüm</b><span>11 Mart 2026</span></button></li>
+        <ul class="arsiv-liste" data-liste="mc">
+          <li><button type="button" data-id="1W3YgS6Q3hRH74ZCcPthqEJG3F_cxHo1X"><b>13. bölüm</b><span>16 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="15dneXOXtzUAHgqt59oyDOFVrw3Y67JBP"><b>12. bölüm</b><span>10 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="1ALbQ1X_a8Ar_f7KWL-kmcZmaEZMPCTBI"><b>11. bölüm</b><span>9 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="1JbtH54fMr8JEaHSxjoYhXo0uhCxsDA0s"><b>10. bölüm</b><span>6 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="1pqYUPw1HoY6zJakH-Hy27vwMriCPPwbX"><b>9. bölüm</b><span>5 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="1kDOSjHNeH2ufnIqZUQh61umBjlcJxZR4"><b>8. bölüm</b><span>4 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="1kGFifgtqeZBvmrMl_9UtyX3w2-e6t8Jx"><b>7. bölüm</b><span>3 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="11eNJuHjmRFWUlG8DgRabqbegCnWXrXMF"><b>6. bölüm</b><span>2 Kasım 2026</span></button></li>
+          <li><button type="button" data-id="1cAtTPAc8hy7XBLWSpEEgobUCc1olD3od"><b>5. bölüm</b><span>30 Ekim 2026</span></button></li>
+          <li><button type="button" data-id="1XYGIGU52f3uAdsVFGP3DvWr-sSMV6lIM"><b>4. bölüm</b><span>29 Ekim 2026</span></button></li>
+          <li><button type="button" data-id="1p3lYm1Q1jq4LuNrwIIITYZlPyXQpxjIg"><b>3. bölüm</b><span>28 Ekim 2026</span></button></li>
+          <li><button type="button" data-id="1lyIoC33FhhSt-5Cj3WvM-N2HNUeWXcLn"><b>2. bölüm</b><span>27 Ekim 2026</span></button></li>
+          <li><button type="button" data-id="1NEak8JVj2oxzEi5lJW82UDJ2TSb739Lz"><b>1. bölüm</b><span>26 Ekim 2026</span></button></li>
+        </ul>
+        <ul class="arsiv-liste" data-liste="mgo" hidden>
+          <li><button type="button" data-id="1pmpmluA22ZH8V1rUSWNlWkNj0Y5T5QgK"><b>22. bölüm</b><span>21 Ekim 2026</span></button></li>
+          <li><button type="button" data-id="1LkEV3Q_MY-J4eKApKi23V1MGIn5voRqN"><b>21. bölüm</b><span>14 Ekim 2026</span></button></li>
+          <li><button type="button" data-id="17WIXia2Z-y1ReGpWKN9yDAtA6w4qatbl"><b>20. bölüm</b><span>7 Ekim 2026</span></button></li>
+          <li><button type="button" data-id="1QBX-ZQQnQlk6GkTf_5INXdlBs-bytnsi"><b>19. bölüm</b><span>30 Eylül 2026</span></button></li>
+          <li><button type="button" data-id="1iuLK0m8iTAHWf_7bEPCorokeQasSmQ8T"><b>18. bölüm</b><span>23 Eylül 2026</span></button></li>
+          <li><button type="button" data-id="1I5Vp5fxiQhJV2CGW8Tm04wB6_0qvMdtt"><b>17. bölüm</b><span>26 Ağustos 2026</span></button></li>
+          <li><button type="button" data-id="1RbZql5mlByOEsC5DROoavXwf_6HyxxrW"><b>16. bölüm</b><span>19 Ağustos 2026</span></button></li>
+          <li><button type="button" data-id="164ohKy8fGJeyLPcBBZ-h4oX366kHSYz0"><b>15. bölüm</b><span>22 Temmuz 2026</span></button></li>
+          <li><button type="button" data-id="18oNUlAXNOiMepssceXR136hBtYnuNmlH"><b>14. bölüm</b><span>15 Temmuz 2026</span></button></li>
+          <li><button type="button" data-id="1XKOcp093xWOdaP3xApmsvrzE9p3FwX0X"><b>13. bölüm</b><span>8 Temmuz 2026</span></button></li>
+          <li><button type="button" data-id="1sGqSd0XkQytLZb8VJK2zwrv9qEu1QaFf"><b>12. bölüm</b><span>24 Haziran 2026</span></button></li>
+          <li><button type="button" data-id="17mzBKCacrKfGHplCsmADxypOYf12XY-O"><b>11. bölüm</b><span>17 Haziran 2026</span></button></li>
+          <li><button type="button" data-id="1mxPQUf3-iB6mTZcdAsgfQxO3CZboJVSt"><b>10. bölüm</b><span>3 Haziran 2026</span></button></li>
+          <li><button type="button" data-id="1CWKky8Fw9ur5kz2K5oWYMKNvH9MWa4mJ"><b>9. bölüm</b><span>20 Mayıs 2026</span></button></li>
+          <li><button type="button" data-id="15nbZcF2TdqBQUDPVc1_z_TkefjwPdTpA"><b>8. bölüm</b><span>13 Mayıs 2026</span></button></li>
+          <li><button type="button" data-id="11yfhgESEq4AQOttebfygvmchN4IP3_Hd"><b>7. bölüm</b><span>6 Mayıs 2026</span></button></li>
+          <li><button type="button" data-id="1l-v6D4jSy2C634KLDALs2Tb3kzN4ataZ"><b>6. bölüm · 1. kısım</b><span>29 Nisan 2026</span></button></li>
+          <li><button type="button" data-id="1dTvGgUWA1UONIsrrTPOiwl1nk0z4NhyK"><b>6. bölüm · 2. kısım</b><span>29 Nisan 2026</span></button></li>
+          <li><button type="button" data-id="1VEP5dWlm485dXLADRVLdf7B0CBReEj6s"><b>5. bölüm</b><span>15 Nisan 2026</span></button></li>
+          <li><button type="button" data-id="1Dj4l5zognCduOZ5MdDANDtHVggK0tFpP"><b>4. bölüm</b><span>8 Nisan 2026</span></button></li>
+          <li><button type="button" data-id="1cAbc-h4-lTfLWSB-_uLEJ2ghFAhHquFo"><b>3. bölüm</b><span>1 Nisan 2026</span></button></li>
+          <li><button type="button" data-id="1GkUy4n_eno110jPI0qsif8KN7DujO_qJ"><b>2. bölüm</b><span>18 Mart 2026</span></button></li>
+          <li><button type="button" data-id="1Uho84smopnEMnYLxlJWptC4oA-KVnp5z"><b>1. bölüm</b><span>11 Mart 2026</span></button></li>
         </ul>
       </div>
       <a class="youtube" href="https://youtube.com/@iletisimgunlugu" target="_blank" rel="noopener">
@@ -785,16 +820,32 @@ footer .kap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   }catch(e){}
 })();
 (function(){
-  var ekran=document.getElementById('arsivEkran'),simdi=document.getElementById('arsivSimdi'),liste=document.getElementById('arsivListe');
-  if(!liste)return; var etkin=null;
-  liste.addEventListener('click',function(e){
-    var b=e.target.closest('button'); if(!b||b===etkin)return;
+  var kutu=document.getElementById('radyo-arsiv'); if(!kutu)return;
+  var ekran=document.getElementById('arsivEkran'),simdi=document.getElementById('arsivSimdi'),onc=document.getElementById('arsivOnceki'),son=document.getElementById('arsivSonraki');
+  var listeler=kutu.querySelectorAll('.arsiv-liste'),sekmeler=kutu.querySelectorAll('.arsiv-sekme'),etkin=null;
+  function gorunen(){return kutu.querySelector('.arsiv-liste:not([hidden])');}
+  function butonlar(){return Array.prototype.slice.call(gorunen().querySelectorAll('button'));}
+  function dugmeler(){var l=butonlar(),i=l.indexOf(etkin);onc.disabled=i<1;son.disabled=i<0||i>=l.length-1;}
+  function cal(b){
     if(etkin)etkin.classList.remove('etkin'); b.classList.add('etkin'); etkin=b;
     ekran.innerHTML='<iframe src="https://drive.google.com/file/d/'+b.dataset.id+'/preview" allow="autoplay" title="'+b.querySelector('b').textContent+'"></iframe>';
     ekran.classList.add('acik');
-    simdi.innerHTML='<b>'+b.querySelector('b').textContent+'</b> · '+b.querySelector('span').textContent;
-  });
+    var ad=kutu.querySelector('.arsiv-sekme.etkin b').textContent;
+    simdi.innerHTML='<b>'+ad+'</b> · '+b.querySelector('b').textContent+' · '+b.querySelector('span').textContent;
+    var ul=b.closest('ul'),li=b.parentNode; if(li.offsetTop<ul.scrollTop||li.offsetTop+li.offsetHeight>ul.scrollTop+ul.clientHeight)ul.scrollTop=li.offsetTop-8; dugmeler();
+  }
+  function sekme(k){
+    sekmeler.forEach(function(t){t.classList.toggle('etkin',t.dataset.liste===k);t.setAttribute('aria-selected',t.dataset.liste===k);});
+    listeler.forEach(function(l){l.hidden=l.dataset.liste!==k;}); dugmeler();
+  }
+  sekmeler.forEach(function(t){t.addEventListener('click',function(){sekme(t.dataset.liste);});});
+  listeler.forEach(function(l){l.addEventListener('click',function(e){var b=e.target.closest('button');if(b&&b!==etkin)cal(b);});});
+  onc.addEventListener('click',function(){var l=butonlar(),i=l.indexOf(etkin);if(i>0)cal(l[i-1]);});
+  son.addEventListener('click',function(){var l=butonlar(),i=l.indexOf(etkin);if(i<0)cal(l[0]);else if(i<l.length-1)cal(l[i+1]);});
+  function hash(){if(location.hash==='#medya-arsiv')sekme('mgo');else if(location.hash==='#medya-cocuk-arsiv')sekme('mc');}
+  hash(); window.addEventListener('hashchange',hash);
   ekran.addEventListener('contextmenu',function(e){e.preventDefault();});
+  dugmeler(); son.disabled=false;
 })();
 </script>
 </body>
